@@ -48,19 +48,26 @@
             <nav class="hidden lg:flex items-center gap-12">
                 <a href="#about" class="nav-link">O spoločnosti</a>
                 <a href="#products" class="nav-link">Produkty</a>
-                <a href="#partners" class="nav-link">Partneri</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </nav>
 
             <!-- Actions -->
             <div class="flex items-center gap-6">
+                <!-- Language Switcher -->
+                <div
+                    class="hidden md:flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-400 border-r border-slate-100 pr-6 mr-2">
+                    <a href="#" class="hover:text-brand-blue transition-colors text-brand-blue">SK</a>
+                    <a href="#" class="hover:text-brand-blue transition-colors">EN</a>
+                    <a href="#" class="hover:text-brand-blue transition-colors">RU</a>
+                </div>
+
                 <div class="hidden sm:flex flex-col items-end text-right">
                     <span
                         class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Sekretariát</span>
                     <span class="text-xs font-extrabold text-brand-black">+421 2 4524 8188</span>
                 </div>
                 <a href="kontakt.html"
-                    class="text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-sm hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
+                    class="text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
                     nám</a>
             </div>
         </div>
@@ -327,7 +334,7 @@
 
                 <div class="p-8 border-t border-slate-100 bg-slate-50">
                     <button onclick="closeProductModal()"
-                        class="w-full bg-brand-black text-white font-extrabold text-xs uppercase tracking-widest py-5 hover:bg-brand-blue transition-colors">
+                        class="w-full bg-brand-black text-white font-extrabold text-xs uppercase tracking-widest py-5 rounded-full hover:bg-brand-blue transition-colors">
                         Zavrieť detail
                     </button>
                 </div>
@@ -382,7 +389,7 @@
                             možnosti prepravy? Kontaktujte náš tím odborníkov.
                         </p>
                         <a href="kontakt.html"
-                            class="inline-flex items-center justify-center gap-4 bg-brand-black text-white px-8 py-5 font-black uppercase text-xs tracking-[0.2em] rounded-sm hover:bg-brand-blue transition-all shadow-xl max-w-max group/btn">
+                            class="inline-flex items-center justify-center gap-4 bg-brand-black text-white px-8 py-5 font-black uppercase text-xs tracking-[0.2em] rounded-full hover:bg-brand-blue transition-all shadow-xl max-w-max group/btn">
                             <span>Všetky kontakty a pobočky</span>
                             <i
                                 class="fa-solid fa-arrow-right-long text-[10px] transform group-hover/btn:translate-x-1 transition-transform"></i>
@@ -453,7 +460,7 @@
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
                     <a href="kontakt.html"
-                        class="bg-brand-blue text-white px-10 py-5 rounded-sm font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-darkBlue transition-all shadow-xl shadow-brand-blue/30">
+                        class="bg-brand-blue text-white px-10 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-darkBlue transition-all shadow-xl shadow-brand-blue/30">
                         Vyžiadať ponuku
                     </a>
 
