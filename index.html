@@ -212,241 +212,131 @@
                         <!-- Product 1: Plechy -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-8 h-full flex flex-col group hover:shadow-xl transition-all duration-500 border border-slate-100">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-[#95EFCF] text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300">
+                                    class="w-16 h-16 shrink-0 bg-[#95EFCF] text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300">
                                     <i class="fa-solid fa-layer-group"></i>
                                 </div>
-                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight">Oceľové plechy,
-                                    zvitky, páska</h3>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Oceľové plechy, zvitky, páska</h3>
 
-                                <div class="space-y-4 flex-grow">
-                                    <div class="text-sm font-bold text-slate-500">
-                                        <p class="text-brand-black text-xs uppercase tracking-widest mb-1 opacity-50">
-                                            Hlavné produkty</p>
-                                        <ul class="space-y-1 text-brand-black">
-                                            <li>• Oceľové plechy</li>
-                                            <li>• Oceľové zvitky, oceľová páska</li>
-                                        </ul>
+                                <button onclick="openProductModal(0)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-[10px]"></i>
                                     </div>
-
-                                    <!-- Accordion -->
-                                    <div class="pt-4 border-t border-slate-100">
-                                        <button onclick="toggleDetails(this)"
-                                            class="flex items-center justify-between w-full text-brand-black font-extrabold text-sm uppercase tracking-wider group/btn">
-                                            <span>Detaily produktu</span>
-                                            <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-                                        </button>
-                                        <div
-                                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
-                                            <div class="py-6 space-y-6 text-sm text-slate-500 font-bold">
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Rozmery</p>
-                                                    <div class="grid grid-cols-1 gap-3">
-                                                        <div class="bg-slate-50 p-3 text-[11px] leading-relaxed">
-                                                            <span
-                                                                class="block text-[10px] text-brand-black opacity-40 mb-1">PLECHY</span>
-                                                            Hrúbka: 0.5 - 160 mm<br>Šírka: do 4 000 mm<br>Dĺžka: do 12
-                                                            000 mm
-                                                        </div>
-                                                        <div class="bg-slate-50 p-3 text-[11px] leading-relaxed">
-                                                            <span
-                                                                class="block text-[10px] text-brand-black opacity-40 mb-1">ZVITKY
-                                                                / PÁSKA</span>
-                                                            Hrúbka: 0.35 - 12.5 mm<br>Šírka: 40 - 1 600 mm
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Typy a Kvality</p>
-                                                    <p class="leading-relaxed text-[11px]">Za tepla/studena, štandardné,
-                                                        upravené, vzorované, pozinkované, lodné.</p>
-                                                    <p class="mt-2 text-brand-black text-[11px]">EN, GOST, ASTM, DIN,
-                                                        GLA, BVA, LRA</p>
-                                                </div>
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Kľúčoví dodávatelia</p>
-                                                    <p class="text-[11px] leading-relaxed opacity-80">AMK Alčevsk,
-                                                        Zaporožstal, Ilyičský MK, Donetský MZ, Azovstal, Severstal,
-                                                        Mečel, Magnitogorsk, ISD Dunaferr, U. S. Steel, HS Czestochowa.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
 
                         <!-- Product 2: Profily -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-8 h-full flex flex-col group hover:shadow-xl transition-all duration-500 border border-slate-100">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-brand-gray text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300 border border-slate-200">
+                                    class="w-16 h-16 shrink-0 bg-brand-gray text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300 border border-slate-200">
                                     <i class="fa-solid fa-shapes"></i>
                                 </div>
-                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight">Oceľové profily,
-                                    rúry, tyče</h3>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Oceľové profily, rúry, tyče</h3>
 
-                                <div class="space-y-4 flex-grow">
-                                    <div class="text-sm font-bold text-slate-500">
-                                        <p class="text-brand-black text-xs uppercase tracking-widest mb-1 opacity-50">
-                                            Hlavné produkty</p>
-                                        <ul class="space-y-1 text-brand-black">
-                                            <li>• Profily L, U, I, T, H</li>
-                                            <li>• Rúry zvárané a bezošvé</li>
-                                            <li>• Tyče kruhové, štvorcové, ploché</li>
-                                        </ul>
+                                <button onclick="openProductModal(1)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-[10px]"></i>
                                     </div>
-
-                                    <!-- Accordion -->
-                                    <div class="pt-4 border-t border-slate-100">
-                                        <button onclick="toggleDetails(this)"
-                                            class="flex items-center justify-between w-full text-brand-black font-extrabold text-sm uppercase tracking-wider group/btn">
-                                            <span>Detaily produktu</span>
-                                            <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-                                        </button>
-                                        <div
-                                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
-                                            <div class="py-6 space-y-6 text-sm text-slate-500 font-bold">
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Sortiment</p>
-                                                    <p class="leading-relaxed text-[11px]">Profily rovnoramenné aj
-                                                        nerovnoramenné. Tyče kruhové, štvorcové, šesťuholníkové a
-                                                        ploché.</p>
-                                                </div>
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Kvality</p>
-                                                    <p class="text-brand-black text-[11px]">EN, GOST, ASTM, DIN</p>
-                                                </div>
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Kľúčoví dodávatelia</p>
-                                                    <p class="text-[11px] leading-relaxed opacity-80">OAO DMKD, AMK
-                                                        Alčevsk, Donetský MZ, FERRUM S.A., VVT Vítkovice, Profil s.r.o.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
 
                         <!-- Product 3: Betonárska -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-8 h-full flex flex-col group hover:shadow-xl transition-all duration-500 border border-slate-100">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-[#F33814] text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300">
+                                    class="w-16 h-16 shrink-0 bg-[#F33814] text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300">
                                     <i class="fa-solid fa-road"></i>
                                 </div>
-                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight">Betonárska oceľ,
-                                    drôt</h3>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Betonárska oceľ, drôt</h3>
 
-                                <div class="space-y-4 flex-grow">
-                                    <div class="text-sm font-bold text-slate-500">
-                                        <p class="text-brand-black text-xs uppercase tracking-widest mb-1 opacity-50">
-                                            Hlavné produkty</p>
-                                        <ul class="space-y-1 text-brand-black">
-                                            <li>• Oceľové tyče hladké a rebrované</li>
-                                            <li>• Oceľový drôt vo zvitkoch</li>
-                                        </ul>
+                                <button onclick="openProductModal(2)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-[10px]"></i>
                                     </div>
-
-                                    <!-- Accordion -->
-                                    <div class="pt-4 border-t border-slate-100">
-                                        <button onclick="toggleDetails(this)"
-                                            class="flex items-center justify-between w-full text-brand-black font-extrabold text-sm uppercase tracking-wider group/btn">
-                                            <span>Detaily produktu</span>
-                                            <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-                                        </button>
-                                        <div
-                                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
-                                            <div class="py-6 space-y-6 text-sm text-slate-500 font-bold">
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Kvality</p>
-                                                    <p class="text-brand-black text-[11px]">EN, GOST, ASTM, DIN</p>
-                                                </div>
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Kľúčoví dodávatelia</p>
-                                                    <p class="text-[11px] leading-relaxed opacity-80">OAO Mečel, ZAO
-                                                        Makeyevo, SZAO MMZ, BMZ, JSC Liepajas Metalurgs.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
 
                         <!-- Product 4: Valce -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-8 h-full flex flex-col group hover:shadow-xl transition-all duration-500 border border-slate-100">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-brand-black text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300">
+                                    class="w-16 h-16 shrink-0 bg-brand-black text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300">
                                     <i class="fa-solid fa-gears"></i>
                                 </div>
-                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight">Oceľové valce,
-                                    tŕne</h3>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Oceľové valce, tŕne</h3>
 
-                                <div class="space-y-4 flex-grow">
-                                    <div class="text-sm font-bold text-slate-500">
-                                        <p class="text-brand-black text-xs uppercase tracking-widest mb-1 opacity-50">
-                                            Hlavné produkty</p>
-                                        <ul class="space-y-1 text-brand-black">
-                                            <li>• Zariadenia pre valcovanie trate</li>
-                                            <li>• Tŕne dierovacie</li>
-                                        </ul>
+                                <button onclick="openProductModal(3)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <i class="fa-solid fa-plus text-[10px]"></i>
                                     </div>
-
-                                    <!-- Accordion -->
-                                    <div class="pt-4 border-t border-slate-100">
-                                        <button onclick="toggleDetails(this)"
-                                            class="flex items-center justify-between w-full text-brand-black font-extrabold text-sm uppercase tracking-wider group/btn">
-                                            <span>Detaily produktu</span>
-                                            <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-                                        </button>
-                                        <div
-                                            class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out opacity-0">
-                                            <div class="py-6 space-y-6 text-sm text-slate-500 font-bold">
-                                                <div>
-                                                    <p
-                                                        class="text-brand-black text-[10px] uppercase tracking-widest mb-2 opacity-50">
-                                                        Kľúčoví dodávatelia</p>
-                                                    <p class="text-[11px] leading-relaxed opacity-80">Dneprotechservis,
-                                                        EZTM, ORMETO-YUMZ Orsk.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
-
                     <!-- Pagination dots -->
                     <div class="swiper-pagination !-bottom-12"></div>
                 </div>
             </div>
         </section>
+
+        <!-- Product Details Modal -->
+        <div id="product-modal" class="fixed inset-0 z-[100] hidden">
+            <div id="modal-overlay"
+                class="absolute inset-0 bg-brand-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-500">
+            </div>
+            <div id="modal-content"
+                class="absolute right-0 top-0 h-full w-full md:w-[600px] bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col">
+                <div class="p-8 border-b border-slate-100 flex items-center justify-between bg-[#EEF4F4]">
+                    <div id="modal-icon-container"
+                        class="w-12 h-12 bg-brand-black text-white rounded-sm flex items-center justify-center text-xl">
+                        <i id="modal-icon" class="fa-solid"></i>
+                    </div>
+                    <button onclick="closeProductModal()"
+                        class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                        <i class="fa-solid fa-xmark text-lg"></i>
+                    </button>
+                </div>
+
+                <div class="flex-grow overflow-y-auto p-8 lg:p-12">
+                    <h2 id="modal-title" class="text-3xl font-extrabold text-brand-black mb-8 leading-tight"></h2>
+
+                    <div id="modal-body" class="space-y-10 text-slate-600">
+                        <!-- Dynamic content injected here -->
+                    </div>
+                </div>
+
+                <div class="p-8 border-t border-slate-100 bg-slate-50">
+                    <button onclick="closeProductModal()"
+                        class="w-full bg-brand-black text-white font-extrabold text-xs uppercase tracking-widest py-5 hover:bg-brand-blue transition-colors">
+                        Zavrieť detail
+                    </button>
+                </div>
+            </div>
+        </div>
 
         <!-- Partners / Suppliers -->
         <section id="partners" class="py-24 bg-brand-black text-white relative overflow-hidden">
@@ -666,22 +556,203 @@
             }
         });
 
-        function toggleDetails(btn) {
-            const content = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-
-            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
-                content.style.maxHeight = '0px';
-                content.style.opacity = '0';
-                icon.style.transform = 'rotate(0deg)';
-                btn.closest('.swiper-slide').classList.remove('z-10');
-            } else {
-                content.style.maxHeight = content.scrollHeight + 'px';
-                content.style.opacity = '1';
-                icon.style.transform = 'rotate(180deg)';
-                btn.closest('.swiper-slide').classList.add('z-10');
+        // Product Data for Modal
+        const productData = [
+            {
+                title: "Oceľové plechy, zvitky, páska",
+                icon: "fa-layer-group",
+                color: "#95EFCF",
+                content: `
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Technické špecifikácie</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-slate-50 p-6 border-l-4 border-[#95EFCF]">
+                                <span class="block text-[11px] font-black text-brand-black mb-2">OCEĽOVÉ PLECHY</span>
+                                <p class="text-sm leading-relaxed">
+                                    <strong>Hrúbka:</strong> 0.5 – 160 mm<br>
+                                    <strong>Šírka:</strong> do 4 000 mm<br>
+                                    <strong>Dĺžka:</strong> do 12 000 mm
+                                </p>
+                            </div>
+                            <div class="bg-slate-50 p-6 border-l-4 border-[#95EFCF]">
+                                <span class="block text-[11px] font-black text-brand-black mb-2">ZVITKY A PÁSKA</span>
+                                <p class="text-sm leading-relaxed">
+                                    <strong>Hrúbka:</strong> 0.35 – 12.5 mm<br>
+                                    <strong>Šírka:</strong> 40 – 1 600 mm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Typy a Spracovanie</p>
+                        <p class="text-sm leading-loose">
+                            Za tepla, za studena valcované, štandardné, povrchovo upravené, vzorované, pozinkované, lodné.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Zmluvné kvality</p>
+                        <p class="text-lg font-extrabold text-brand-black">EN, GOST, ASTM, DIN, GLA, BVA, LRA</p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Hlavní dodávatelia</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-[13px] font-medium leading-relaxed">
+                            <li>• OAO AMK Alčevsk, Ukrajina</li>
+                            <li>• OAO Zaporožstal, Ukrajina</li>
+                            <li>• OAO Ilyičský MK, Ukrajina</li>
+                            <li>• ZAO Donetský MZ, Ukrajina</li>
+                            <li>• OAO Azovstal, Ukrajina</li>
+                            <li>• OAO Severstal, Rusko</li>
+                            <li>• OAO Mečel, Rusko</li>
+                            <li>• OAO Magnitogorsk, Rusko</li>
+                            <li>• ISD Dunaferr, Maďarsko</li>
+                            <li>• U. S. Steel Košice, Slovensko</li>
+                            <li>• ISD HS Czestochowa, Poľsko</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                title: "Oceľové profily, rúry, tyče",
+                icon: "fa-shapes",
+                color: "#E5E7EB",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Profily</p>
+                            <p class="font-extrabold text-brand-black text-lg mb-2">L, U, I, T, H</p>
+                            <p class="opacity-70 italic">rovnoramenné, nerovnoramenné</p>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Rúry</p>
+                            <ul class="font-extrabold text-brand-black space-y-1">
+                                <li>• zvárané</li>
+                                <li>• bezošvé</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Tyče</p>
+                            <ul class="font-extrabold text-brand-black space-y-1">
+                                <li>• kruhové</li>
+                                <li>• štvorcové</li>
+                                <li>• šesťuholníkové</li>
+                                <li>• ploché</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Kvality podľa noriem</p>
+                        <p class="text-brand-black font-extrabold leading-relaxed">EN, GOST, ASTM, DIN</p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Dodávatelia</p>
+                        <ul class="space-y-2 text-[13px] font-medium">
+                            <li>• OAO DMKD, Ukrajina</li>
+                            <li>• OAO AMK Alčevsk, Ukrajina</li>
+                            <li>• ZAO Donetský MZ, Ukrajina</li>
+                            <li>• FERRUM S.A., Poľsko</li>
+                            <li>• VVT Vítkovice, ČR</li>
+                            <li>• Profil s.r.o., Rakovo, SR</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                title: "Betonárska oceľ, drôt",
+                icon: "fa-road",
+                color: "#F33814",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Oceľové tyče</p>
+                            <div class="flex gap-4">
+                                <span class="bg-slate-100 px-3 py-1 text-xs font-bold rounded-full">hladké</span>
+                                <span class="bg-slate-100 px-3 py-1 text-xs font-bold rounded-full">rebrované</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Oceľový drôt</p>
+                            <p class="font-extrabold text-brand-black">dodávaný vo zvitkoch</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Kvality</p>
+                        <p class="text-brand-black font-extrabold">EN, GOST, ASTM, DIN</p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Dodávatelia</p>
+                        <ul class="space-y-2 text-[13px] font-medium">
+                            <li>• OAO Mečel, Rusko</li>
+                            <li>• ZAO Makeyevo, Ukrajina</li>
+                            <li>• SZAO MMZ, Moldavsko</li>
+                            <li>• BMZ, Bielorusko</li>
+                            <li>• JSC Liepajas Metalurgs, Lotyšsko</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                title: "Oceľové valce, tŕne",
+                icon: "fa-gears",
+                color: "#0B0C10",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Valce</p>
+                            <p class="font-extrabold text-brand-black leading-relaxed">Zariadenia pre valcovanie trate</p>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Tŕne</p>
+                            <p class="font-extrabold text-brand-black leading-relaxed">dierovacie</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Certifikovaní dodávatelia</p>
+                        <ul class="space-y-3 text-[13px] font-medium">
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-industry opacity-30"></i> Dneprotechservis, Ukrajina</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-industry opacity-30"></i> EZTM, Rusko</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-industry opacity-30"></i> ORMETO-YUMZ Orsk, Rusko</li>
+                        </ul>
+                    </div>
+                `
             }
+        ];
+
+        function openProductModal(index) {
+            const product = productData[index];
+            const modal = document.getElementById('product-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const content = document.getElementById('modal-content');
+
+            document.getElementById('modal-title').innerText = product.title;
+            document.getElementById('modal-icon').className = `fa-solid ${product.icon}`;
+            document.getElementById('modal-icon-container').style.backgroundColor = product.icon === 'fa-shapes' ? '#0B0C10' : product.color;
+            document.getElementById('modal-body').innerHTML = product.content;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+
+            setTimeout(() => {
+                overlay.style.opacity = '1';
+                content.style.transform = 'translateX(0)';
+            }, 10);
         }
+
+        function closeProductModal() {
+            const overlay = document.getElementById('modal-overlay');
+            const content = document.getElementById('modal-content');
+            const modal = document.getElementById('product-modal');
+
+            overlay.style.opacity = '0';
+            content.style.transform = 'translateX(100%)';
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scroll
+            }, 500);
+        }
+
+        // Close on overlay click
+        document.getElementById('modal-overlay').addEventListener('click', closeProductModal);
     </script>
 </body>
 
