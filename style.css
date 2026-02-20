@@ -2,10 +2,14 @@
 
 :root {
     /* Nová oceľová modrá */
-    --brand-blue: #0056b3; 
+    --brand-blue: #0056b3;
     --brand-dark-blue: #003d80;
     --bg-light: #fdfdfd;
     --text-main: #0a0a0a;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,7 +23,7 @@ body {
 .grid-lines {
     background-size: 40px 40px;
     background-image: linear-gradient(to right, #f0f0f0 1px, transparent 1px),
-                      linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
+        linear-gradient(to bottom, #f0f0f0 1px, transparent 1px);
 }
 
 .heading-xl {
@@ -49,12 +53,17 @@ body {
 
 /* Sticker animation style */
 .sticker-rotate {
-    animation: rotate 12s linear infinite;
+    animation: rotate 40s linear infinite;
 }
 
 @keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .reveal-up {
@@ -89,4 +98,18 @@ body {
 
 .service-card:hover {
     border-top-color: var(--brand-blue);
+}
+
+/* Subtle Hero Gradient Semi-circle */
+.hero-gradient {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 86, 179, 0.05) 0%, rgba(255, 255, 255, 0) 60%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 1;
 }

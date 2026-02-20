@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +28,7 @@
         }
     </script>
 </head>
+
 <body class="bg-white">
 
     <!-- Header Navigation (Consistent with Home) -->
@@ -35,7 +37,8 @@
             <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center gap-2">
                     <i class="fa-solid fa-cube text-2xl text-brand-blue"></i>
-                    <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span class="text-brand-blue">metal</span></span>
+                    <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span
+                            class="text-brand-blue">metal</span></span>
                 </a>
             </div>
             <nav class="hidden lg:flex items-center gap-12">
@@ -45,54 +48,187 @@
                 <a href="#" class="nav-link text-brand-blue border-b-2 border-brand-blue">Kontakt</a>
             </nav>
             <div class="flex items-center gap-6">
-                <a href="index.html" class="text-[11px] font-[800] uppercase tracking-widest bg-brand-black text-white px-8 py-3.5 rounded-sm hover:bg-brand-blue transition-all">Back to Home</a>
+                <a href="index.html"
+                    class="text-[11px] font-[800] uppercase tracking-widest bg-brand-black text-white px-8 py-3.5 rounded-sm hover:bg-brand-blue transition-all">Back
+                    to Home</a>
             </div>
         </div>
     </header>
 
-    <main class="pt-40 pb-32">
+    <main class="pt-32 pb-32">
+        <!-- Hero Image for Contact -->
+        <section class="max-w-[1400px] mx-auto px-6 lg:px-12 mb-16 lg:mb-24">
+            <div class="w-full h-[300px] lg:h-[450px] rounded-[2.5rem] overflow-hidden relative shadow-2xl group">
+                <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                    alt="Sídlo spoločnosti a zákaznícka podpora"
+                    class="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-brand-black/20 to-transparent">
+                </div>
+                <div class="absolute bottom-8 left-8 sm:bottom-12 sm:left-12 text-white max-w-2xl px-2">
+                    <p
+                        class="text-[10px] sm:text-xs font-black uppercase tracking-[0.5em] mb-4 text-brand-blue drop-shadow-md">
+                        Zákaznícka podpora</p>
+                    <h3
+                        class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight shadow-black/50 drop-shadow-xl">
+                        Spájame svet ocele <br> s vaším podnikaním.</h3>
+                </div>
+            </div>
+        </section>
+
         <section class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="flex flex-col lg:flex-row gap-20">
-                
+
                 <!-- Left Side: Text and FAQ -->
+                <!-- Left Side: Text and Contacts -->
                 <div class="lg:w-1/2">
-                    <div class="inline-block bg-orange-50 text-brand-accent px-4 py-1.5 rounded-sm text-[10px] font-black uppercase tracking-[0.2em] mb-6">
-                        Connect with us
+                    <div
+                        class="inline-block bg-brand-blue/10 text-brand-blue px-4 py-1.5 rounded-sm text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                        Kontakt
                     </div>
                     <h1 class="text-5xl lg:text-7xl font-[800] text-brand-black tracking-tighter leading-[0.95] mb-12">
-                        Industry Inquiries & Support
+                        Sme tu pre vás.
                     </h1>
 
-                    <div class="space-y-6">
-                        <!-- FAQ Item 1 -->
-                        <div class="border-b border-slate-200 py-6 group cursor-pointer">
-                            <div class="flex justify-between items-center">
-                                <span class="text-lg font-extrabold text-brand-black">01. Poskytujete technické poradenstvo?</span>
-                                <i class="fa-solid fa-arrow-down text-sm text-slate-400 group-hover:text-brand-blue transition-colors"></i>
+                    <div class="space-y-12">
+
+                        <!-- Pobočky Grid -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                            <div class="bg-brand-gray/50 p-6 rounded-2xl border border-slate-100">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-blue shadow-sm mb-4">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Sídlo
+                                    spoločnosti</h4>
+                                <p class="text-brand-black font-extrabold text-lg mb-1">EUROTRADEMETAL, s.r.o.</p>
+                                <p class="text-slate-500 font-medium text-sm">Svätoplukova 2/a<br>821 08 Bratislava</p>
+                            </div>
+                            <div class="bg-brand-gray/50 p-6 rounded-2xl border border-slate-100">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-blue shadow-sm mb-4">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">
+                                    Kancelária Senec</h4>
+                                <p class="text-slate-500 font-medium text-sm mt-1">Lichnerova 93<br>903 01 Senec</p>
                             </div>
                         </div>
-                        <!-- FAQ Item 2 (Open state example) -->
-                        <div class="border-b border-slate-200 py-6 group cursor-pointer">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-lg font-extrabold text-brand-black">02. Je Eurotrademetal vhodný pre môj biznis?</span>
-                                <i class="fa-solid fa-arrow-up text-sm text-brand-blue transition-colors"></i>
-                            </div>
-                            <p class="text-slate-500 font-medium leading-relaxed">
-                                Zistite, či je Eurotrademetal správnym partnerom pre vaše podnikanie. Ponúkame riešenia šité na mieru pre rôzne priemyselné odvetvia a individuálne potreby v oblasti metalurgie.
-                            </p>
-                        </div>
-                        <!-- FAQ Item 3 -->
-                        <div class="border-b border-slate-200 py-6 group cursor-pointer">
-                            <div class="flex justify-between items-center">
-                                <span class="text-lg font-extrabold text-brand-black">03. Aké sú dodacie lehoty materiálov?</span>
-                                <i class="fa-solid fa-arrow-down text-sm text-slate-400 group-hover:text-brand-blue transition-colors"></i>
-                            </div>
-                        </div>
-                        <!-- FAQ Item 4 -->
-                        <div class="border-b border-slate-200 py-6 group cursor-pointer">
-                            <div class="flex justify-between items-center">
-                                <span class="text-lg font-extrabold text-brand-black">04. Zabezpečujete aj medzinárodnú logistiku?</span>
-                                <i class="fa-solid fa-arrow-down text-sm text-slate-400 group-hover:text-brand-blue transition-colors"></i>
+
+                        <!-- Oddelenia Table/List -->
+                        <div>
+                            <h3 class="text-2xl font-extrabold text-brand-black mb-6">Oddelenia a vedenie</h3>
+                            <div class="space-y-4">
+
+                                <!-- Sekretariát -->
+                                <div
+                                    class="border border-slate-200 rounded-2xl p-6 hover:border-brand-blue/30 hover:shadow-lg transition-all bg-white group">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4
+                                                class="text-brand-black font-extrabold text-lg mb-1 group-hover:text-brand-blue transition-colors">
+                                                Sekretariát</h4>
+                                            <p class="text-slate-500 text-sm font-medium">Všeobecné informácie</p>
+                                        </div>
+                                        <div class="text-sm font-bold text-slate-600 space-y-1">
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-phone text-slate-400 w-4"></i>+421 2 4524 8188
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-fax text-slate-400 w-4"></i>+421 2 4524 8195
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-envelope text-slate-400 w-4"></i><a
+                                                    href="mailto:sekretariat@eurotrade.sk"
+                                                    class="hover:text-brand-blue transition-colors">sekretariat@eurotrade.sk</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Konateľ -->
+                                <div
+                                    class="border border-slate-200 rounded-2xl p-6 hover:border-brand-blue/30 hover:shadow-lg transition-all bg-white group">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4
+                                                class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-blue mb-1">
+                                                Konateľ spoločnosti</h4>
+                                            <p
+                                                class="text-brand-black font-extrabold text-xl group-hover:text-brand-blue transition-colors">
+                                                Michal Chachaľák</p>
+                                        </div>
+                                        <div class="text-sm font-bold text-slate-600 space-y-1">
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-phone text-slate-400 w-4"></i>+421 1 4524 8192
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-fax text-slate-400 w-4"></i>+421 2 4524 8195
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-envelope text-slate-400 w-4"></i><a
+                                                    href="mailto:chachalak@eurotrade.sk"
+                                                    class="hover:text-brand-blue transition-colors">chachalak@eurotrade.sk</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Predaj -->
+                                <div
+                                    class="border border-slate-200 rounded-2xl p-6 hover:border-brand-blue/30 hover:shadow-lg transition-all bg-white group">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4
+                                                class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-blue mb-1">
+                                                Oddelenie predaja</h4>
+                                            <p
+                                                class="text-brand-black font-extrabold text-xl group-hover:text-brand-blue transition-colors">
+                                                Rastislav Chachaľák</p>
+                                        </div>
+                                        <div class="text-sm font-bold text-slate-600 space-y-1">
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-phone text-slate-400 w-4"></i>+421 2 6446 3698
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-fax text-slate-400 w-4"></i>+421 2 6446 3698
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-envelope text-slate-400 w-4"></i><a
+                                                    href="mailto:r.chachalak@eurotrade.sk"
+                                                    class="hover:text-brand-blue transition-colors">r.chachalak@eurotrade.sk</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Ekonomické -->
+                                <div
+                                    class="border border-slate-200 rounded-2xl p-6 hover:border-brand-blue/30 hover:shadow-lg transition-all bg-white group">
+                                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                                        <div>
+                                            <h4
+                                                class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-blue mb-1">
+                                                Ekonomické oddelenie</h4>
+                                            <p
+                                                class="text-brand-black font-extrabold text-xl group-hover:text-brand-blue transition-colors">
+                                                Angela Tóthová</p>
+                                        </div>
+                                        <div class="text-sm font-bold text-slate-600 space-y-1">
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-phone text-slate-400 w-4"></i>+421 2 4524 8188
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-fax text-slate-400 w-4"></i>+421 2 4524 8195
+                                            </div>
+                                            <div class="flex items-center gap-3"><i
+                                                    class="fa-solid fa-envelope text-slate-400 w-4"></i><a
+                                                    href="mailto:a.tothova@stonline.sk"
+                                                    class="hover:text-brand-blue transition-colors">a.tothova@stonline.sk</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -100,42 +236,51 @@
 
                 <!-- Right Side: The Form (Exact replica from screen) -->
                 <div class="lg:w-1/2">
-                    <div class="bg-brand-gray/50 p-10 lg:p-16 rounded-[2.5rem] border border-slate-100">
+                    <div class="bg-brand-gray/50 p-10 lg:p-16 rounded-[2.5rem] border border-slate-100 sticky top-32">
                         <form class="space-y-8">
                             <div class="space-y-2">
-                                <label class="text-xs font-bold text-brand-black">Full Name *</label>
-                                <input type="text" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                <label class="text-xs font-bold text-brand-black">Meno a priezvisko *</label>
+                                <input type="text"
+                                    class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
                             </div>
 
                             <div class="grid md:grid-cols-2 gap-8">
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-brand-black">Email *</label>
-                                    <input type="email" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                    <label class="text-xs font-bold text-brand-black">E-mail *</label>
+                                    <input type="email"
+                                        class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
                                 </div>
                                 <div class="space-y-2">
-                                    <label class="text-xs font-bold text-brand-black">Phone *</label>
-                                    <input type="tel" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                    <label class="text-xs font-bold text-brand-black">Telefón *</label>
+                                    <input type="tel"
+                                        class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
                                 </div>
                             </div>
 
                             <div class="space-y-2">
-                                <label class="text-xs font-bold text-brand-black">Subject</label>
-                                <input type="text" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                <label class="text-xs font-bold text-brand-black">Predmet</label>
+                                <input type="text"
+                                    class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
                             </div>
 
                             <div class="space-y-2">
-                                <label class="text-xs font-bold text-brand-black">Message *</label>
-                                <textarea rows="6" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all"></textarea>
+                                <label class="text-xs font-bold text-brand-black">Správa *</label>
+                                <textarea rows="6"
+                                    class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all"></textarea>
                             </div>
 
                             <div class="flex items-center gap-3">
-                                <input type="checkbox" id="terms" class="w-5 h-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue">
-                                <label for="terms" class="text-xs font-medium text-slate-500 tracking-tight">I have read & accepted Terms & Conditions.</label>
+                                <input type="checkbox" id="terms"
+                                    class="w-5 h-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue">
+                                <label for="terms" class="text-xs font-medium text-slate-500 tracking-tight">Súhlasím so
+                                    spracovaním osobných údajov.</label>
                             </div>
 
-                            <button class="relative group bg-brand-black text-white px-10 py-5 font-black uppercase text-xs tracking-[0.2em] overflow-hidden flex items-center justify-center gap-4 hover:bg-brand-blue transition-all shadow-xl">
-                                <span>Submit Now</span>
-                                <i class="fa-solid fa-arrow-right-long text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                            <button
+                                class="relative group bg-brand-black text-white px-10 py-5 font-black uppercase text-xs tracking-[0.2em] overflow-hidden flex items-center justify-center gap-4 hover:bg-brand-blue transition-all shadow-xl">
+                                <span>Odoslať správu</span>
+                                <i
+                                    class="fa-solid fa-arrow-right-long text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
                             </button>
                         </form>
                     </div>
@@ -148,29 +293,37 @@
         <section class="relative py-32 overflow-hidden bg-brand-gray/30 border-t border-slate-100 mt-24">
             <!-- Focused Central Europe Map Background -->
             <div class="absolute inset-0 opacity-40 pointer-events-none flex items-center justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Central_Europe_location_map.svg" class="w-full h-full object-contain scale-[2] grayscale opacity-60 translate-y-10" alt="Central Europe Map CTA">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Central_Europe_location_map.svg"
+                    class="w-full h-full object-contain scale-[2] grayscale opacity-60 translate-y-10"
+                    alt="Central Europe Map CTA">
                 <div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-white"></div>
                 <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
             </div>
 
             <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
                 <div class="flex items-center justify-center gap-4 mb-8">
-                    <span class="text-xs font-black uppercase tracking-[0.2em] text-brand-blue">Budujeme budúcnosť z ocele</span>
+                    <span class="text-xs font-black uppercase tracking-[0.2em] text-brand-blue">Budujeme budúcnosť z
+                        ocele</span>
                     <span class="w-12 h-[2px] bg-brand-blue"></span>
                 </div>
-                
+
                 <h2 class="text-4xl md:text-6xl font-[800] text-brand-black tracking-tight leading-none mb-12">
                     Spoľahlivý partner pre <br> vaše projekty v strednej Európe.
                 </h2>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-8">
-                    <a href="mailto:sekretariat@eurotrade.sk" class="bg-brand-blue text-white px-10 py-5 rounded-sm font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-darkBlue transition-all shadow-xl shadow-brand-blue/30">
+                    <a href="mailto:sekretariat@eurotrade.sk"
+                        class="bg-brand-blue text-white px-10 py-5 rounded-sm font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-darkBlue transition-all shadow-xl shadow-brand-blue/30">
                         Vyžiadať ponuku
                     </a>
-                    
-                    <a href="mailto:info@eurotrade.sk" class="group flex items-center gap-2 text-brand-black text-xs font-black uppercase tracking-[0.2em] hover:text-brand-blue transition-colors">
-                        <span class="border-b-2 border-brand-black group-hover:border-brand-blue transition-colors pb-1">Napíšte nám</span>
-                        <i class="fa-solid fa-arrow-right-long text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+
+                    <a href="mailto:info@eurotrade.sk"
+                        class="group flex items-center gap-2 text-brand-black text-xs font-black uppercase tracking-[0.2em] hover:text-brand-blue transition-colors">
+                        <span
+                            class="border-b-2 border-brand-black group-hover:border-brand-blue transition-colors pb-1">Napíšte
+                            nám</span>
+                        <i
+                            class="fa-solid fa-arrow-right-long text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -179,10 +332,12 @@
     </main>
 
     <footer class="bg-brand-black text-white py-12 border-t border-white/5">
-        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center text-[10px] font-bold uppercase tracking-widest text-slate-600">
+        <div
+            class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center text-[10px] font-bold uppercase tracking-widest text-slate-600">
             &copy; 2026 Eurotrademetal. All rights reserved.
         </div>
     </footer>
 
 </body>
+
 </html>
