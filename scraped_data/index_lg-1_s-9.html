@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>EUROTRADEMETAL, spol. s r.o. - Kontaktný formulár </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index,follow" />
+  <meta name="googlebot" content="index,follow,snippet,archive" />
+  <meta name="description" content="<!--MISC_DESCRIPTION-->" />
+  <meta name="keywords" content="<!--MISC_KEYWORDS-->" />
+  <meta name="author" content="Positive s.r.o - WEBDESIGN www.pozitiv.sk" />  
+  <meta name="copyright" content="Positive s.r.o" />  
+  
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+   
+  
+  <noscript>
+      <link rel="stylesheet" type="text/css" href="css/style_noscript.css" />
+  </noscript>
+	
+  <script src="./js/jquery.js" type=text/javascript></script>
+  <script src="./js/interface.js" type="text/javascript" ></script>
+  <script src="./js/scripts.js" type="text/javascript" ></script>
+
+</head>
+<body >
+  <div id="main_holder">
+<div id="main">
+<div id="head_navigation">
+	<div id="languages">
+		<ul>
+<li>
+<a href="?s=9&amp;lg=1" title="slovensky">
+slovensky
+<!--[if IE 7]><!-->
+</a>
+<!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+</ul>
+	</div>
+	<div id="sections">
+		<ul>
+<li id="" class="first" >
+<a href="?lg=1&amp;s=1" title="Profil spoločnosti" style="background-color: #e12403;" >
+Profil spoločnosti
+</a>
+</li><li id="" class="" >
+<a href="?lg=1&amp;s=2" title="Produkty" style="background-color: #12afef;" >
+Produkty
+</a>
+</li><li id="" class="" >
+<a href="?lg=1&amp;s=3" title="Kontakt" style="background-color: #7edf00;" >
+Kontakt
+</a>
+</li><li id="actived" class="last" >
+<a href="?lg=1&amp;s=9" title="Kontaktný formulár" style="background-color: #7e8285;" >
+Kontaktný formulár
+</a>
+</li>
+</ul>
+	</div>
+</div>
+<div id="holder">
+	<div id="left_sider">
+		<div id="logo">
+			<table cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td><a href="?lg=1" title="EUROTRADEMETAL, spol. s r.o."><img src="userfiles/logo_euro_trade_metal_resized.210208_162253_11.gif" alt="EUROTRADEMETAL, spol. s r.o."/></a></td>
+  </tr>
+</table>
+    	</div>	
+    	<div id="sub_sections">
+			<h3>Kontaktný formulár</h3>
+<ul class=""></ul>
+		</div>
+	</div>	
+	<div id="wide_sider">
+		<div id="section_picture">
+			<img src="./userfiles/fourth_small.260208_164102_11.png" alt="" /><img src="./userfiles/first_small.260208_164212_11.png" alt="" /><img src="./userfiles/betonarska_ocel_etm.100308_110208_11.png" alt="" /><img src="./userfiles/second_small.260208_164011_11.png" alt="" />
+		</div>
+		<div id="content">
+			
+			<div id="contact">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script type="text/javascript">
+/**
+ * Skontroluje povinne polozky, ci su vyplenene...
+ *
+ * @return boolean
+ */
+function validate()
+{
+  //validacia mena
+  if( document.getElementById('d_tel').value == '' )
+  {
+    alert("Telefón musíte vyplniť!!");
+    document.getElementById('d_tel').focus();
+    return false;
+  }
+
+  // validacia textu
+  if( document.getElementById('d_text').value == '' )
+  {
+     alert("Text musíte vyplniť!!");
+     document.getElementById('d_text').focus();
+     return false;
+  }
+
+  return true;
+}
+function get_recaptcha_token(token) {
+  if(validate()) {
+    document.getElementById("recaptcha_token").value = token;
+    document.getElementById("contact_form").submit();
+  }  
+}
+</script>
+
+<div class="contact_text">
+	<p>Máte otázky ? Napíšte nám.</p>
+</div>
+<br />
+
+<form action="/?lg=1&s=9" method="post" id="contact_form">
+<table border="0" cellspacing="2" cellpadding="1">
+<tr>
+  <td><label for="name">Meno:</label></td>
+  <td><input type="text" name="name" value="" id="d_name" /></td>
+</tr>
+<tr>
+  <td><label for="email">E-mail:</label></td>
+  <td><input type="text" name="email" value="" id="d_email" /></td>
+</tr>
+<tr>
+  <td><label for="subject">Predmet:</label></td>
+  <td><input type="text" name="subject" value="" id="d_subject" /></td>
+</tr>
+<tr>
+  <td><label for="tel">Telefón:</label></td>
+  <td><input type="text" name="tel" value="" id="d_tel" /></td>
+</tr>
+<tr>
+  <td><label>Text:</label></td>
+  <td><textarea name="text" cols="40" rows="7" id="d_text"></textarea></td>
+</tr>
+<tr>
+   <td></td>
+   <td>
+    <input type="hidden" class="submit" name="sended_contact" value="ODOSLAŤ" />
+    <input type="hidden" name="recaptcha_token" id="recaptcha_token">
+    <button class="g-recaptcha" 
+        data-sitekey="6LcgEe8eAAAAAAA2i2eAYbmIdTg3vTROG7inAYuY" 
+        data-callback='get_recaptcha_token' 
+        data-action='contact'>ODOSLAŤ</button>
+  </td>
+</tr>
+</table>
+</form>
+</div>
+			
+			<!--SEARCH_FORM-->
+			<!--SEARCH_RESULT-->
+		</div>
+	</div>
+</div>
+<div id="footer">
+  
+</div>
+<div id="foot_cleaner"></div>
+</div>
+
+</div>
+<!--POPUP-->
+</body>
+</html>

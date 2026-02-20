@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUROTRADEMETAL | Oceľ a metalurgia</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0056b3', // Hlavná modrá
+                            darkBlue: '#003d80', // Tmavšia modrá pre akcenty
+                            black: '#0a0a0a',
+                            gray: '#f5f5f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-gray overflow-x-hidden selection:bg-brand-blue selection:text-white">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 w-full bg-white z-[100] border-b border-slate-100">
+        <div class="max-w-[1400px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12">
+            <!-- Logo -->
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-cube text-2xl text-brand-blue"></i>
+                <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span class="text-brand-blue">metal</span></span>
+            </div>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-12">
+                <a href="#about" class="nav-link">O spoločnosti</a>
+                <a href="#products" class="nav-link">Produkty</a>
+                <a href="#partners" class="nav-link">Partneri</a>
+                <a href="#contact" class="nav-link">Kontakt</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-6">
+                <div class="hidden sm:flex flex-col items-end text-right">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Sekretariát</span>
+                    <span class="text-xs font-extrabold text-brand-black">+421 2 4524 8188</span>
+                </div>
+                <a href="#contact" class="text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-sm hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte nám</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        
+        <!-- Hero Section -->
+        <section class="bg-white border-b border-slate-100 py-12 lg:py-24 relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-16">
+                    <div class="lg:w-3/4">
+                        <div class="flex items-center gap-3 text-brand-blue font-bold text-xs uppercase tracking-[0.3em] mb-8">
+                            <span class="w-8 h-[1px] bg-brand-blue"></span>
+                            Partner v metalurgii od roku 1996
+                        </div>
+                        <h1 class="heading-xl text-brand-black leading-none">
+                            Medzinárodný obchod <br class="hidden lg:block"> s oceľou a hutníckym materiálom.
+                        </h1>
+                    </div>
+                    
+                    <!-- Circular Sticker -->
+                    <div class="relative w-32 h-32 flex-shrink-0 hidden lg:flex items-center justify-center">
+                        <svg class="sticker-rotate absolute w-full h-full text-brand-blue opacity-10 fill-current" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 2" />
+                        </svg>
+                        <div class="bg-brand-blue w-20 h-20 rounded-full flex items-center justify-center shadow-xl shadow-brand-blue/20 border-2 border-white cursor-pointer hover:scale-110 transition-transform">
+                           <i class="fa-solid fa-arrow-down text-white text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Hero Image -->
+                <div class="relative w-full h-[400px] lg:h-[600px] rounded-[1rem] overflow-hidden group shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1535813547-99c456a4194c?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Oceľové zvitky" 
+                         class="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent"></div>
+                    <div class="absolute bottom-10 left-10 text-white max-w-lg">
+                        <p class="text-[10px] font-black uppercase tracking-[0.5em] mb-4 opacity-70">Strategický zámer</p>
+                        <h3 class="text-2xl font-extrabold leading-tight">Vytvoriť malé servisné centrum ocele s ľahkou strojárskou výrobou.</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-slate-50 py-24 lg:py-32 border-b border-slate-200">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20">
+                <div>
+                    <span class="text-brand-blue font-bold text-xs uppercase tracking-[0.3em] mb-6 block">O spoločnosti</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-black mb-8 leading-tight">
+                        História a vízia <br> spoločnosti.
+                    </h2>
+                    <div class="text-slate-600 text-lg leading-relaxed space-y-6">
+                        <p>
+                            Spoločnosť <strong class="text-brand-black">EUROTRADEMETAL</strong> bola založená spoločenskou zmluvou dňa 18.12.1996 pod názvom EUROFERROMETALL. Jej zakladateľom bola cyperská spoločnosť ROHSTOFF HOLDING LIMITED.
+                        </p>
+                        <p>
+                            Zámerom bolo vytvoriť spoločnosť, ktorej manažéri využijú jazykové a teritoriálne možnosti spolupráce medzi krajinami bývalého Sovietskeho zväzu a centrálnou Európou. Od svojho vzniku sa spoločnosť zaoberala výlučne obchodom v odvetví čiernej metalurgie.
+                        </p>
+                        <p>
+                            Globalizácia a vstup do EU spôsobili, že spoločnosť sa začala viac orientovať na predaj ocele konečným spotrebiteľom. Ide o importy a reexporty ocele z Ruska a Ukrajiny na náš trh a na trhy Poľska, Maďarska a Česka.
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 flex flex-col justify-center">
+                    <h3 class="text-2xl font-extrabold mb-8 flex items-center gap-3">
+                        <i class="fa-solid fa-file-contract text-brand-blue"></i> Základné údaje
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">Obchodné meno</span>
+                            <span class="font-extrabold text-brand-black text-right">EUROTRADEMETAL, spol. s r.o.</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">IČO</span>
+                            <span class="font-extrabold text-brand-black">35 707 429</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">DIČ</span>
+                            <span class="font-extrabold text-brand-black">2020265082</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">Deň zápisu</span>
+                            <span class="font-extrabold text-brand-black">21.01.1997</span>
+                        </li>
+                        <li class="pt-2">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider block mb-2">Sídlo</span>
+                            <span class="font-extrabold text-brand-black text-lg">Svätoplukova 2/a, 821 08 Bratislava</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section (Grid Style) -->
+        <section id="products" class="bg-white py-24 lg:py-40">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <div class="text-center max-w-3xl mx-auto mb-20">
+                    <span class="text-brand-blue font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Portfólio</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-black mb-6">Naša ponuka produktov</h2>
+                    <p class="text-slate-500 font-medium text-lg">Dodávame materiály v kvalitách podľa EN, GOST, ASTM, DIN, GLA, BVA, LRA.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Product 1: Plechy -->
+                    <div class="group relative bg-brand-gray rounded-[2rem] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                        <div class="p-10 pb-0 relative z-10">
+                            <div class="w-14 h-14 bg-brand-blue text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg shadow-brand-blue/20">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <h3 class="text-3xl font-extrabold text-brand-black mb-4">Oceľové plechy, zvitky</h3>
+                            <div class="grid grid-cols-2 gap-6 text-sm font-bold text-slate-500 mb-8">
+                                <div>
+                                    <span class="block text-brand-blue text-xs uppercase tracking-widest mb-1">Hrúbka</span>
+                                    0.5 - 160 mm
+                                </div>
+                                <div>
+                                    <span class="block text-brand-blue text-xs uppercase tracking-widest mb-1">Šírka</span>
+                                    do 4 000 mm
+                                </div>
+                                <div>
+                                    <span class="block text-brand-blue text-xs uppercase tracking-widest mb-1">Typy</span>
+                                    Za tepla/studena, pozinkované, lodné
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1618408080064-0775d7870a6c?auto=format&fit=crop&q=80&w=1000" class="w-full h-64 object-cover mt-4 opacity-80 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Plechy">
+                    </div>
+
+                    <!-- Product 2: Profily -->
+                    <div class="group relative bg-brand-gray rounded-[2rem] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                        <div class="p-10 pb-0 relative z-10">
+                            <div class="w-14 h-14 bg-brand-black text-white rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                                <i class="fa-solid fa-shapes"></i>
+                            </div>
+                            <h3 class="text-3xl font-extrabold text-brand-black mb-4">Oceľové profily, rúry, tyče</h3>
+                            <div class="grid grid-cols-2 gap-6 text-sm font-bold text-slate-500 mb-8">
+                                <div>
+                                    <span class="block text-brand-blue text-xs uppercase tracking-widest mb-1">Profily</span>
+                                    L, U, I, T, H
+                                </div>
+                                <div>
+                                    <span class="block text-brand-blue text-xs uppercase tracking-widest mb-1">Rúry</span>
+                                    Zvárané, bezošvé
+                                </div>
+                                <div>
+                                    <span class="block text-brand-blue text-xs uppercase tracking-widest mb-1">Tyče</span>
+                                    Kruhové, štvorcové, ploché
+                                </div>
+                            </div>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1531658428279-7a56112c3008?auto=format&fit=crop&q=80&w=1000" class="w-full h-64 object-cover mt-4 opacity-80 group-hover:scale-105 transition-transform duration-700 grayscale group-hover:grayscale-0" alt="Profily">
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                     <!-- Product 3: Betonárska -->
+                     <div class="group relative bg-brand-gray rounded-[2rem] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                        <div class="p-10 pb-0 relative z-10">
+                            <div class="w-14 h-14 bg-white text-brand-blue rounded-xl flex items-center justify-center text-2xl mb-6 border border-slate-200">
+                                <i class="fa-solid fa-road"></i>
+                            </div>
+                            <h3 class="text-3xl font-extrabold text-brand-black mb-4">Betonárska oceľ, drôt</h3>
+                            <ul class="space-y-2 mb-8 text-slate-500 font-bold">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-blue"></i> Oceľové tyče hladké a rebrované</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-blue"></i> Oceľový drôt vo zvitkoch</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Product 4: Valce -->
+                    <div class="group relative bg-brand-gray rounded-[2rem] overflow-hidden hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                        <div class="p-10 pb-0 relative z-10">
+                            <div class="w-14 h-14 bg-white text-brand-black rounded-xl flex items-center justify-center text-2xl mb-6 border border-slate-200">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h3 class="text-3xl font-extrabold text-brand-black mb-4">Oceľové valce, tŕne</h3>
+                            <ul class="space-y-2 mb-8 text-slate-500 font-bold">
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-blue"></i> Zariadenia pre valcovanie trate</li>
+                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-blue"></i> Tŕne dierovacie</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partners / Suppliers -->
+        <section id="partners" class="py-24 bg-brand-black text-white relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
+                <p class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 opacity-50">Kľúčoví dodávatelia</p>
+                <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-70">
+                    <span class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">U. S. STEEL</span>
+                    <span class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">SEVERSTAL</span>
+                    <span class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">AZOVSTAL</span>
+                    <span class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">DUNAFERR</span>
+                    <span class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">VÍTKOVICE</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (Blue Theme) -->
+        <section id="contact" class="bg-brand-blue py-24 lg:py-32 relative overflow-hidden">
+             <!-- Arrow Background -->
+             <div class="absolute right-0 top-0 opacity-10 pointer-events-none">
+                <i class="fa-solid fa-arrow-up-right text-[40rem] rotate-45 transform translate-x-1/4 translate-y-[-10%] text-white"></i>
+             </div>
+             
+             <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 grid lg:grid-cols-2 gap-16 text-white">
+                <div>
+                    <span class="text-[12px] font-black uppercase tracking-[0.5em] mb-6 block opacity-80">Kontaktujte nás</span>
+                    <h2 class="text-5xl lg:text-7xl font-[800] leading-none tracking-tighter mb-12">
+                        Pripravení na <br> spoluprácu.
+                    </h2>
+                    
+                    <div class="space-y-10 mb-12">
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Sídlo spoločnosti</h4>
+                                <p class="opacity-70 leading-relaxed">Svätoplukova 2/a<br>821 08 Bratislava</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Kancelária Senec</h4>
+                                <p class="opacity-70 leading-relaxed">Lichnerova 93<br>903 01 Senec</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 items-start">
+                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg mb-1">Konateľ spoločnosti</h4>
+                                <p class="font-extrabold text-xl">Michal Chachaľák</p>
+                                <p class="opacity-70">+421 2 4524 8192 | chachalak@eurotrade.sk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-brand-black/20 p-10 lg:p-14 rounded-[2rem] backdrop-blur-md border border-white/10">
+                    <h4 class="text-3xl font-black mb-8">Odoslať dopyt</h4>
+                    <form class="space-y-6">
+                        <input type="text" placeholder="Vaše meno" class="w-full bg-white/5 border border-white/20 px-6 py-5 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white focus:bg-white/10 transition-all font-bold">
+                        <input type="email" placeholder="Váš E-mail" class="w-full bg-white/5 border border-white/20 px-6 py-5 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white focus:bg-white/10 transition-all font-bold">
+                        <textarea placeholder="Ako vám môžeme pomôcť?" rows="4" class="w-full bg-white/5 border border-white/20 px-6 py-5 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white focus:bg-white/10 transition-all font-bold"></textarea>
+                        <button class="w-full bg-white text-brand-blue py-5 rounded-lg font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-black hover:text-white transition-all shadow-xl">
+                            Odoslať správu
+                        </button>
+                    </form>
+                </div>
+             </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-black text-white pt-24 pb-12 border-t border-white/10">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-20 mb-20">
+                <div class="lg:w-1/3">
+                    <div class="flex items-center gap-2 mb-8">
+                        <i class="fa-solid fa-cube text-3xl text-brand-blue"></i>
+                        <span class="text-2xl font-[900] tracking-tighter uppercase">Eurotrade<span class="text-brand-blue">metal</span></span>
+                    </div>
+                    <p class="text-slate-500 leading-relaxed font-medium mb-10 text-sm">
+                        EUROTRADEMETAL, spol. s r.o. je dynamická spoločnosť pôsobiaca v oblasti medzinárodného obchodu s oceľou. Našou prioritou je kvalita, spoľahlivosť a dlhodobé partnerstvá.
+                    </p>
+                    <span class="text-6xl font-black text-white/5 tracking-tighter uppercase select-none">Est. 1996</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:w-1/3">
+                    <div>
+                        <h5 class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue mb-8">Oddelenie predaja</h5>
+                        <p class="text-white font-bold text-lg mb-2">Rastislav Chachaľák</p>
+                        <p class="text-slate-400 font-medium text-sm leading-loose">
+                            +421 2 6446 3698<br>
+                            r.chachalak@eurotrade.sk
+                        </p>
+                    </div>
+                    <div>
+                        <h5 class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-blue mb-8">Ekonomické odd.</h5>
+                        <p class="text-white font-bold text-lg mb-2">Angela Tóthová</p>
+                        <p class="text-slate-400 font-medium text-sm leading-loose">
+                            +421 2 4524 8188<br>
+                            a.tothova@stonline.sk
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center text-[10px] font-bold uppercase tracking-widest text-slate-600 border-t border-white/5 pt-8">
+                <span>&copy; 2026 Eurotrademetal, spol. s r.o.</span>
+                <span class="mt-4 md:mt-0">Všetky práva vyhradené.</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
