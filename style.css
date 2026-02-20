@@ -113,3 +113,52 @@ body {
     pointer-events: none;
     z-index: 1;
 }
+
+/* Mobile Menu Styles */
+#mobile-menu {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
+    will-change: transform, opacity;
+}
+
+#mobile-menu.hidden-menu {
+    transform: translateX(100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mobile-menu.active-menu {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-nav-link {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: var(--text-main);
+    transition: all 0.3s ease;
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.mobile-nav-link:hover {
+    color: var(--brand-blue);
+    padding-left: 0.5rem;
+}
+
+#mobile-menu-overlay {
+    transition: opacity 0.4s ease;
+}
+
+#mobile-menu-overlay.hidden-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mobile-menu-overlay.active-overlay {
+    opacity: 1;
+    pointer-events: auto;
+}

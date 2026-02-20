@@ -88,11 +88,55 @@
                     <span class="text-xs font-extrabold text-brand-black">+421 2 4524 8188</span>
                 </div>
                 <a href="kontakt.html"
-                    class="text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
+                    class="hidden sm:inline-flex items-center justify-center text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
                     nám</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle Menu">
+                    <span class="w-6 h-0.5 bg-brand-black transition-all"></span>
+                    <span class="w-6 h-0.5 bg-brand-black transition-all"></span>
+                    <span class="w-6 h-0.5 bg-brand-black transition-all"></span>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-black/40 backdrop-blur-sm z-[150] hidden-overlay"></div>
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[160] shadow-2xl p-8 flex flex-col hidden-menu">
+        <div class="flex items-center justify-between mb-12">
+            <div class="flex items-center gap-2">
+                <i class="fa-solid fa-cube text-2xl text-brand-blue"></i>
+                <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span
+                        class="text-brand-blue">metal</span></span>
+            </div>
+            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center text-brand-black text-2xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col gap-4 mb-auto">
+            <a href="#about" class="mobile-nav-link">O spoločnosti</a>
+            <a href="#products" class="mobile-nav-link">Produkty</a>
+            <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+
+        <div class="pt-8 border-t border-slate-100">
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">Rýchly kontakt</p>
+            <div class="space-y-4">
+                <a href="tel:+421245248188" class="flex items-center gap-3 font-extrabold text-brand-black">
+                    <i class="fa-solid fa-phone text-brand-blue w-4"></i> +421 2 4524 8188
+                </a>
+                <a href="mailto:sekretariat@eurotrade.sk" class="flex items-center gap-3 font-bold text-slate-600">
+                    <i class="fa-solid fa-envelope text-brand-blue w-4"></i> sekretariat@eurotrade.sk
+                </a>
+            </div>
+            <a href="kontakt.html"
+                class="mt-8 block text-center bg-brand-blue text-white py-4 rounded-full font-black uppercase text-xs tracking-widest shadow-lg shadow-brand-blue/30">Napíšte
+                nám</a>
+        </div>
+    </div>
 
     <main class="pt-20">
 
@@ -775,9 +819,44 @@
             }, 500);
         }
 
+
         // Close on overlay click
         document.getElementById('modal-overlay').addEventListener('click', closeProductModal);
+
+        // Mobile Menu Toggle Logic
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu(show) {
+            if (show) {
+                mobileMenuOverlay.classList.remove('hidden-overlay');
+                mobileMenuOverlay.classList.add('active-overlay');
+                mobileMenu.classList.remove('hidden-menu');
+                mobileMenu.classList.add('active-menu');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuOverlay.classList.remove('active-overlay');
+                mobileMenuOverlay.classList.add('hidden-overlay');
+                mobileMenu.classList.remove('active-menu');
+                mobileMenu.classList.add('hidden-menu');
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuToggle.addEventListener('click', () => toggleMobileMenu(true));
+        mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+        mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileMenu(false);
+            });
+        });
     </script>
+
 </body>
 
 </html>
