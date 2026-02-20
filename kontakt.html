@@ -47,12 +47,25 @@
                 <a href="#" class="nav-link text-brand-blue border-b-2 border-brand-blue">Kontakt</a>
             </nav>
             <div class="flex items-center gap-6">
-                <!-- Language Switcher -->
-                <div
-                    class="hidden md:flex items-center gap-3 text-[10px] font-black uppercase tracking-widest text-slate-400 border-r border-slate-100 pr-6 mr-2">
-                    <a href="#" class="hover:text-brand-blue transition-colors text-brand-blue">SK</a>
-                    <a href="#" class="hover:text-brand-blue transition-colors">EN</a>
-                    <a href="#" class="hover:text-brand-blue transition-colors">RU</a>
+                <!-- Language Dropdown -->
+                <div class="relative group hidden md:block">
+                    <button
+                        class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-black hover:text-brand-blue transition-colors border-r border-slate-100 pr-6 mr-2">
+                        <span>SK</span>
+                        <i class="fa-solid fa-chevron-down text-[8px] transition-transform group-hover:rotate-180"></i>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-24 bg-white border border-slate-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top translate-y-2 group-hover:translate-y-0 z-[110] overflow-hidden">
+                        <div class="flex flex-col py-2">
+                            <a href="#"
+                                class="px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-brand-blue bg-slate-50 border-l-2 border-brand-blue">SK</a>
+                            <a href="#"
+                                class="px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">EN</a>
+                            <a href="#"
+                                class="px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">RU</a>
+                        </div>
+                    </div>
                 </div>
 
                 <a href="index.html"
