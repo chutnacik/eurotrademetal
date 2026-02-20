@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <style>
+      .country { fill: #1a1a2e; stroke: #ffffff; stroke-width: 1.2; opacity: 0.85; }
+      .country:hover { fill: #0056b3; }
+      .label { font-family: sans-serif; font-size: 10px; fill: #ffffff; text-anchor: middle; opacity: 0.6; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#0a0a0a" opacity="0"/>
+
+  <!-- AUSTRIA -->
+  <path class="country" d="M340,310 L380,305 L410,308 L420,320 L410,335 L385,340 L355,338 L335,328 Z"/>
+  <!-- VIENNA dot -->
+  <circle cx="395" cy="315" r="3" fill="#0056b3"/>
+  <text class="label" x="410" y="312">Wien</text>
+
+  <!-- CZECHIA -->
+  <path class="country" d="M330,230 L390,220 L430,228 L440,250 L420,268 L380,272 L340,265 L318,252 Z"/>
+  <circle cx="375" cy="242" r="3" fill="#0056b3"/>
+  <text class="label" x="390" y="238">Praha</text>
+
+  <!-- SLOVAKIA -->
+  <path class="country" d="M420,270 L490,262 L530,270 L535,285 L510,295 L455,298 L418,290 Z"/>
+  <circle cx="468" cy="278" r="3" fill="#0056b3"/>
+  <text class="label" x="468" y="262">Bratislava</text>
+
+  <!-- HUNGARY -->
+  <path class="country" d="M418,295 L510,295 L545,310 L540,345 L510,360 L450,362 L410,345 L408,318 Z"/>
+  <circle cx="475" cy="320" r="3" fill="#0056b3"/>
+  <text class="label" x="490" y="316">Budapest</text>
+
+  <!-- POLAND -->
+  <path class="country" d="M320,150 L450,138 L510,145 L520,190 L500,220 L440,230 L390,225 L330,228 L310,200 Z"/>
+  <circle cx="420" cy="168" r="3" fill="#0056b3"/>
+  <text class="label" x="435" y="164">Warszawa</text>
+
+  <!-- GERMANY (partial) -->
+  <path class="country" d="M200,160 L315,148 L325,200 L315,235 L290,258 L255,270 L215,260 L190,230 L185,200 Z"/>
+  <circle cx="258" cy="200" r="3" fill="#0056b3"/>
+  <text class="label" x="240" y="196">Berlin</text>
+
+  <!-- UKRAINE (partial) -->
+  <path class="country" d="M530,140 L650,130 L690,160 L680,220 L640,250 L590,260 L540,255 L520,220 L515,175 Z"/>
+  <circle cx="600" cy="185" r="3" fill="#0056b3"/>
+  <text class="label" x="615" y="180">Kyiv</text>
+
+  <!-- ROMANIA (partial) -->
+  <path class="country" d="M540,300 L630,290 L665,320 L658,365 L620,390 L570,388 L535,360 L530,330 Z"/>
+  <circle cx="592" cy="335" r="3" fill="#0056b3"/>
+  <text class="label" x="605" y="330">București</text>
+
+  <!-- CROATIA + SLOVENIA (simplified) -->
+  <path class="country" d="M355,340 L385,342 L400,355 L410,380 L395,400 L360,405 L335,390 L330,368 Z"/>
+  <circle cx="370" cy="365" r="3" fill="#0056b3"/>
+  <text class="label" x="383" y="360">Zagreb</text>
+
+  <!-- SERBIA (partial) -->
+  <path class="country" d="M430,365 L480,360 L500,380 L495,415 L468,430 L435,425 L415,405 L418,380 Z"/>
+  <circle cx="458" cy="390" r="3" fill="#0056b3"/>
+  <text class="label" x="467" y="386">Beograd</text>
+
+  <!-- SWITZERLAND (small) -->
+  <path class="country" d="M250,290 L280,285 L295,298 L290,315 L265,318 L248,308 Z"/>
+
+  <!-- NETHERLANDS (small) -->
+  <path class="country" d="M195,130 L235,125 L248,145 L240,162 L205,165 L188,150 Z"/>
+  <text class="label" x="218" y="140">Amsterdam</text>
+
+  <!-- BELGIUM (small) -->
+  <path class="country" d="M195,162 L240,158 L250,178 L235,192 L200,195 L188,178 Z"/>
+
+  <!-- FRANCE (partial) -->
+  <path class="country" d="M130,200 L190,188 L215,210 L220,260 L195,290 L155,305 L120,285 L108,248 Z"/>
+  <circle cx="168" cy="235" r="3" fill="#0056b3"/>
+  <text class="label" x="152" y="228">Paris</text>
+
+  <!-- BULGARIA (partial) -->
+  <path class="country" d="M540,390 L610,385 L640,405 L635,435 L590,445 L548,440 L530,418 Z"/>
+
+  <!-- LITHUANIA / LATVIA / ESTONIA strip -->
+  <path class="country" d="M430,85 L510,78 L545,95 L535,125 L490,132 L435,128 Z"/>
+  <text class="label" x="482" y="102">Vilnius</text>
+
+  <!-- BELARUS -->
+  <path class="country" d="M510,100 L620,88 L648,115 L640,155 L600,168 L550,165 L508,150 Z"/>
+  <circle cx="582" cy="128" r="3" fill="#0056b3"/>
+  <text class="label" x="582" y="118">Minsk</text>
+
+  <!-- Decorative dots for major trade routes -->
+  <line x1="400" y1="280" x2="420" y2="270" stroke="#0056b3" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="420" y1="270" x2="468" y2="278" stroke="#0056b3" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.5"/>
+  <line x1="468" y1="278" x2="475" y2="320" stroke="#0056b3" stroke-width="0.5" stroke-dasharray="3,3" opacity="0.5"/>
+</svg>
