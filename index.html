@@ -256,62 +256,91 @@
             </div>
         </section>
 
-        <!-- Contact Section (Blue Theme) -->
-        <section id="contact" class="bg-brand-blue py-24 lg:py-32 relative overflow-hidden">
-             <!-- Arrow Background -->
-             <div class="absolute right-0 top-0 opacity-10 pointer-events-none">
-                <i class="fa-solid fa-arrow-up-right text-[40rem] rotate-45 transform translate-x-1/4 translate-y-[-10%] text-white"></i>
-             </div>
-             
-             <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 grid lg:grid-cols-2 gap-16 text-white">
-                <div>
-                    <span class="text-[12px] font-black uppercase tracking-[0.5em] mb-6 block opacity-80">Kontaktujte nás</span>
-                    <h2 class="text-5xl lg:text-7xl font-[800] leading-none tracking-tighter mb-12">
-                        Pripravení na <br> spoluprácu.
-                    </h2>
+        <!-- Contact Section (Based on contact-form.png) -->
+        <section id="contact" class="bg-white py-24 lg:py-40 relative overflow-hidden">
+             <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-20">
                     
-                    <div class="space-y-10 mb-12">
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg mb-1">Sídlo spoločnosti</h4>
-                                <p class="opacity-70 leading-relaxed">Svätoplukova 2/a<br>821 08 Bratislava</p>
-                            </div>
+                    <!-- Left Side: Text and FAQ -->
+                    <div class="lg:w-1/2">
+                        <div class="inline-block bg-orange-50 text-orange-500 px-4 py-1.5 rounded-sm text-[10px] font-black uppercase tracking-[0.2em] mb-6">
+                            Connect with us
                         </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-building"></i>
+                        <h2 class="text-5xl lg:text-7xl font-[800] text-brand-black tracking-tighter leading-[0.95] mb-12">
+                            Industry Inquiries & Support
+                        </h2>
+
+                        <div class="space-y-6">
+                            <!-- FAQ Item 1 -->
+                            <div class="border-b border-slate-200 py-6 group cursor-pointer">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-lg font-extrabold text-brand-black">01. Poskytujete technické poradenstvo?</span>
+                                    <i class="fa-solid fa-arrow-down text-sm text-slate-400 group-hover:text-brand-blue transition-colors"></i>
+                                </div>
                             </div>
-                            <div>
-                                <h4 class="font-bold text-lg mb-1">Kancelária Senec</h4>
-                                <p class="opacity-70 leading-relaxed">Lichnerova 93<br>903 01 Senec</p>
+                            <!-- FAQ Item 2 -->
+                            <div class="border-b border-slate-200 py-6 group cursor-pointer">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="text-lg font-extrabold text-brand-black">02. Je Eurotrademetal vhodný pre môj biznis?</span>
+                                    <i class="fa-solid fa-arrow-up text-sm text-brand-blue transition-colors"></i>
+                                </div>
+                                <p class="text-slate-500 font-medium leading-relaxed">
+                                    Zistite, či je Eurotrademetal správnym partnerom pre vaše podnikanie. Ponúkame riešenia šité na mieru pre rôzne priemyselné odvetvia.
+                                </p>
                             </div>
-                        </div>
-                        <div class="flex gap-6 items-start">
-                            <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center shrink-0">
-                                <i class="fa-solid fa-user-tie"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-bold text-lg mb-1">Konateľ spoločnosti</h4>
-                                <p class="font-extrabold text-xl">Michal Chachaľák</p>
-                                <p class="opacity-70">+421 2 4524 8192 | chachalak@eurotrade.sk</p>
+                            <!-- FAQ Item 3 -->
+                            <div class="border-b border-slate-200 py-6 group cursor-pointer">
+                                <div class="flex justify-between items-center">
+                                    <span class="text-lg font-extrabold text-brand-black">03. Aké sú dodacie lehoty materiálov?</span>
+                                    <i class="fa-solid fa-arrow-down text-sm text-slate-400 group-hover:text-brand-blue transition-colors"></i>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="bg-brand-black/20 p-10 lg:p-14 rounded-[2rem] backdrop-blur-md border border-white/10">
-                    <h4 class="text-3xl font-black mb-8">Odoslať dopyt</h4>
-                    <form class="space-y-6">
-                        <input type="text" placeholder="Vaše meno" class="w-full bg-white/5 border border-white/20 px-6 py-5 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white focus:bg-white/10 transition-all font-bold">
-                        <input type="email" placeholder="Váš E-mail" class="w-full bg-white/5 border border-white/20 px-6 py-5 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white focus:bg-white/10 transition-all font-bold">
-                        <textarea placeholder="Ako vám môžeme pomôcť?" rows="4" class="w-full bg-white/5 border border-white/20 px-6 py-5 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-white focus:bg-white/10 transition-all font-bold"></textarea>
-                        <button class="w-full bg-white text-brand-blue py-5 rounded-lg font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-black hover:text-white transition-all shadow-xl">
-                            Odoslať správu
-                        </button>
-                    </form>
+
+                    <!-- Right Side: The Form -->
+                    <div class="lg:w-1/2">
+                        <div class="bg-brand-gray/50 p-10 lg:p-16 rounded-[2.5rem] border border-slate-100">
+                            <form class="space-y-8">
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-brand-black">Full Name *</label>
+                                    <input type="text" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                </div>
+
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-brand-black">Email *</label>
+                                        <input type="email" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                    </div>
+                                    <div class="space-y-2">
+                                        <label class="text-xs font-bold text-brand-black">Phone *</label>
+                                        <input type="tel" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-brand-black">Subject</label>
+                                    <input type="text" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all">
+                                </div>
+
+                                <div class="space-y-2">
+                                    <label class="text-xs font-bold text-brand-black">Message *</label>
+                                    <textarea rows="6" class="w-full bg-white border border-slate-200 px-6 py-4 rounded-lg focus:outline-none focus:border-brand-blue transition-all"></textarea>
+                                </div>
+
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" id="terms-home" class="w-5 h-5 rounded border-slate-300 text-brand-blue focus:ring-brand-blue">
+                                    <label for="terms-home" class="text-xs font-medium text-slate-500 tracking-tight">I have read & accepted Terms & Conditions.</label>
+                                </div>
+
+                                <button class="relative group bg-brand-black text-white px-10 py-5 font-black uppercase text-xs tracking-[0.2em] overflow-hidden flex items-center justify-center gap-4 hover:bg-brand-blue transition-all shadow-xl">
+                                    <span>Submit Now</span>
+                                    <i class="fa-solid fa-arrow-right-long text-[10px] transform group-hover:translate-x-1 transition-transform"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
              </div>
         </section>
