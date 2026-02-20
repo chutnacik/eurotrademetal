@@ -212,9 +212,9 @@
                         <!-- Product 1: Plechy -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-10 rounded-[2rem] border border-slate-100 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-[#95EFCF] text-brand-black rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300 group-hover:rotate-6">
+                                    class="w-16 h-16 shrink-0 bg-[#95EFCF] text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300">
                                     <i class="fa-solid fa-layer-group"></i>
                                 </div>
                                 <h3 class="text-2xl font-extrabold text-brand-black mb-6">Oceľové plechy, zvitky</h3>
@@ -241,9 +241,9 @@
                         <!-- Product 2: Profily -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-10 rounded-[2rem] border border-slate-100 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-brand-gray text-brand-black rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shadow-sm border border-slate-200 mb-8 transition-transform duration-300 group-hover:rotate-6">
+                                    class="w-16 h-16 shrink-0 bg-brand-gray text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm border border-slate-200 mb-8 transition-transform duration-300">
                                     <i class="fa-solid fa-shapes"></i>
                                 </div>
                                 <h3 class="text-2xl font-extrabold text-brand-black mb-6">Oceľové profily, rúry, tyče
@@ -271,9 +271,9 @@
                         <!-- Product 3: Betonárska -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-10 rounded-[2rem] border border-slate-100 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-[#F33814] text-white rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300 group-hover:rotate-6">
+                                    class="w-16 h-16 shrink-0 bg-[#F33814] text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300">
                                     <i class="fa-solid fa-road"></i>
                                 </div>
                                 <h3 class="text-2xl font-extrabold text-brand-black mb-6">Betonárska oceľ, drôt</h3>
@@ -293,9 +293,9 @@
                         <!-- Product 4: Valce -->
                         <div class="swiper-slide h-auto">
                             <div
-                                class="bg-white p-10 rounded-[2rem] border border-slate-100 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-xl transition-all duration-500">
                                 <div
-                                    class="w-16 h-16 shrink-0 bg-brand-black text-white rounded-2xl flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300 group-hover:rotate-6">
+                                    class="w-16 h-16 shrink-0 bg-brand-black text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-8 transition-transform duration-300">
                                     <i class="fa-solid fa-gears"></i>
                                 </div>
                                 <h3 class="text-2xl font-extrabold text-brand-black mb-6">Oceľové valce, tŕne</h3>
@@ -511,15 +511,18 @@
         new Swiper('.portfolio-swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
-            loop: true,
+            loop: false, // Changed to false to support hiding navigation when not needed
+            watchOverflow: true,
             grabCursor: true,
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                dynamicBullets: true,
             },
             navigation: {
                 nextEl: '.swiper-btn-next',
                 prevEl: '.swiper-btn-prev',
+                lockClass: 'hidden', // This will hide arrows when slider is locked (no overflow)
             },
             breakpoints: {
                 640: {
