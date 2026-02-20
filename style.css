@@ -114,33 +114,29 @@ body {
     z-index: 1;
 }
 
-/* Mobile Menu Styles */
+/* Mobile Menu Styles Refined */
 #mobile-menu {
-    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease;
-    will-change: transform, opacity;
+    transition: transform 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
 }
 
 #mobile-menu.hidden-menu {
-    transform: translateX(100%);
-    opacity: 0;
-    pointer-events: none;
+    transform: translateY(-100%);
 }
 
 #mobile-menu.active-menu {
-    transform: translateX(0);
-    opacity: 1;
-    pointer-events: auto;
+    transform: translateY(0);
 }
 
 .mobile-nav-link {
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
+    font-size: 1.125rem;
+    font-weight: 700;
     color: var(--text-main);
     transition: all 0.3s ease;
     display: block;
-    padding: 1rem 0;
+    padding: 1.25rem 0;
     border-bottom: 1px solid #f1f5f9;
 }
 
@@ -149,8 +145,29 @@ body {
     padding-left: 0.5rem;
 }
 
+/* Animated Hamburger */
+.hamburger-bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.is-active .hamburger-bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.is-active .hamburger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.is-active .hamburger-bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 #mobile-menu-overlay {
-    transition: opacity 0.4s ease;
+    transition: opacity 0.5s ease;
 }
 
 #mobile-menu-overlay.hidden-overlay {

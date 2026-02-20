@@ -92,10 +92,14 @@
                     nám</a>
 
                 <!-- Mobile Menu Toggle -->
-                <button id="mobile-menu-toggle" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle Menu">
-                    <span class="w-6 h-0.5 bg-brand-black transition-all"></span>
-                    <span class="w-6 h-0.5 bg-brand-black transition-all"></span>
-                    <span class="w-6 h-0.5 bg-brand-black transition-all"></span>
+                <button id="mobile-menu-toggle"
+                    class="lg:hidden flex flex-col justify-center items-center h-10 w-10 relative z-[200]"
+                    aria-label="Toggle Menu">
+                    <div class="flex flex-col gap-[6px]">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </div>
                 </button>
             </div>
         </div>
@@ -104,39 +108,34 @@
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-black/40 backdrop-blur-sm z-[150] hidden-overlay"></div>
     <div id="mobile-menu"
-        class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white z-[160] shadow-2xl p-8 flex flex-col hidden-menu">
-        <div class="flex items-center justify-between mb-12">
-            <div class="flex items-center gap-2">
-                <i class="fa-solid fa-cube text-2xl text-brand-blue"></i>
-                <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span
-                        class="text-brand-blue">metal</span></span>
-            </div>
-            <button id="mobile-menu-close" class="w-10 h-10 flex items-center justify-center text-brand-black text-2xl">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-
-        <nav class="flex flex-col gap-4 mb-auto">
+        class="fixed top-0 left-0 w-full h-full bg-white z-[160] overflow-y-auto px-8 pt-32 pb-12 hidden-menu">
+        <nav class="flex flex-col mb-12">
             <a href="#about" class="mobile-nav-link">O spoločnosti</a>
             <a href="#products" class="mobile-nav-link">Produkty</a>
             <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
         </nav>
 
         <div class="pt-8 border-t border-slate-100">
-            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-4">Rýchly kontakt</p>
-            <div class="space-y-4">
-                <a href="tel:+421245248188" class="flex items-center gap-3 font-extrabold text-brand-black">
-                    <i class="fa-solid fa-phone text-brand-blue w-4"></i> +421 2 4524 8188
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6">Rýchly kontakt</p>
+            <div class="space-y-6">
+                <a href="tel:+421245248188" class="flex flex-col gap-1">
+                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Telefón</span>
+                    <span class="font-extrabold text-brand-black text-lg">+421 2 4524 8188</span>
                 </a>
-                <a href="mailto:sekretariat@eurotrade.sk" class="flex items-center gap-3 font-bold text-slate-600">
-                    <i class="fa-solid fa-envelope text-brand-blue w-4"></i> sekretariat@eurotrade.sk
+                <a href="mailto:sekretariat@eurotrade.sk" class="flex flex-col gap-1">
+                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">E-mail</span>
+                    <span class="font-extrabold text-brand-black">sekretariat@eurotrade.sk</span>
                 </a>
             </div>
-            <a href="kontakt.html"
-                class="mt-8 block text-center bg-brand-blue text-white py-4 rounded-full font-black uppercase text-xs tracking-widest shadow-lg shadow-brand-blue/30">Napíšte
-                nám</a>
+
+            <div class="mt-12">
+                <a href="kontakt.html"
+                    class="block text-center bg-brand-black text-white py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl">Napíšte
+                    nám</a>
+            </div>
         </div>
     </div>
+
 
     <main class="pt-20">
 
@@ -825,19 +824,23 @@
 
         // Mobile Menu Toggle Logic
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
         const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
+        let isMenuOpen = false;
+
         function toggleMobileMenu(show) {
+            isMenuOpen = show;
             if (show) {
+                mobileMenuToggle.classList.add('is-active');
                 mobileMenuOverlay.classList.remove('hidden-overlay');
                 mobileMenuOverlay.classList.add('active-overlay');
                 mobileMenu.classList.remove('hidden-menu');
                 mobileMenu.classList.add('active-menu');
                 document.body.style.overflow = 'hidden';
             } else {
+                mobileMenuToggle.classList.remove('is-active');
                 mobileMenuOverlay.classList.remove('active-overlay');
                 mobileMenuOverlay.classList.add('hidden-overlay');
                 mobileMenu.classList.remove('active-menu');
@@ -846,8 +849,10 @@
             }
         }
 
-        mobileMenuToggle.addEventListener('click', () => toggleMobileMenu(true));
-        mobileMenuClose.addEventListener('click', () => toggleMobileMenu(false));
+        mobileMenuToggle.addEventListener('click', () => {
+            toggleMobileMenu(!isMenuOpen);
+        });
+
         mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
 
         mobileLinks.forEach(link => {
@@ -856,6 +861,7 @@
             });
         });
     </script>
+
 
 </body>
 
