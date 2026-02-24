@@ -27,9 +27,15 @@ body {
 }
 
 .heading-xl {
-    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-size: clamp(2.25rem, 6vw + 0.75rem, 5rem);
     line-height: 0.95;
     letter-spacing: -0.04em;
+    font-weight: 800;
+}
+
+.heading-l {
+    font-size: clamp(1.75rem, 4vw + 0.5rem, 3.5rem);
+    line-height: 1.1;
     font-weight: 800;
 }
 
@@ -66,6 +72,98 @@ body {
     }
 }
 
+/* ── Scroll-reveal base using Animations (Tailwind safe) ── */
+[data-reveal] {
+    opacity: 0;
+    will-change: opacity, transform;
+}
+
+[data-reveal].is-visible[data-reveal='down'] {
+    animation: revealDown 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-reveal].is-visible[data-reveal='up'] {
+    animation: revealUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[data-reveal].is-visible[data-reveal='scale'] {
+    animation: revealScale 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes revealDown {
+    from {
+        opacity: 0;
+        transform: translateY(-24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes revealUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes revealScale {
+    from {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* stagger delay helpers via animation-delay */
+[data-delay='50'] {
+    animation-delay: 0.05s;
+}
+
+[data-delay='100'] {
+    animation-delay: 0.10s;
+}
+
+[data-delay='150'] {
+    animation-delay: 0.15s;
+}
+
+[data-delay='200'] {
+    animation-delay: 0.20s;
+}
+
+[data-delay='250'] {
+    animation-delay: 0.25s;
+}
+
+[data-delay='300'] {
+    animation-delay: 0.30s;
+}
+
+[data-delay='350'] {
+    animation-delay: 0.35s;
+}
+
+[data-delay='400'] {
+    animation-delay: 0.40s;
+}
+
+[data-delay='500'] {
+    animation-delay: 0.50s;
+}
+
+/* legacy alias */
 .reveal-up {
     opacity: 0;
     transform: translateY(30px);

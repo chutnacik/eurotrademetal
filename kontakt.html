@@ -308,23 +308,8 @@
 
                 <!-- Right Side: The Form -->
                 <div data-reveal="down" data-delay="200" class="lg:w-1/2">
-                    <div
-                        class="bg-white p-10 lg:p-14 rounded-[2.5rem] shadow-[0_20px_50px_-12px_rgba(0,0,0,0.05)] border border-slate-100 sticky top-24 relative overflow-hidden group/formcard">
-                        <!-- Decorative gradient blobs -->
-                        <div
-                            class="absolute -top-40 -right-40 w-80 h-80 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none transition-transform duration-700 group-hover/formcard:translate-x-10">
-                        </div>
-                        <div
-                            class="absolute -bottom-40 -left-40 w-80 h-80 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none transition-transform duration-700 group-hover/formcard:-translate-x-10">
-                        </div>
-
-                        <div class="relative z-10 mb-10">
-                            <h3 class="text-2xl font-extrabold text-brand-black tracking-tight mb-2">Napíšte nám</h3>
-                            <p class="text-slate-500 text-sm font-medium leading-relaxed">Radi zodpovieme všetky vaše
-                                otázky. Vyplňte formulár nižšie a my sa vám čoskoro ozveme.</p>
-                        </div>
-
-                        <form class="space-y-6 relative z-10" id="contactForm" novalidate>
+                    <div class="bg-brand-gray/50 p-10 lg:p-16 rounded-[2.5rem] border border-slate-100 sticky top-32">
+                        <form class="space-y-6" id="contactForm" novalidate>
                             <div class="space-y-2 relative group">
                                 <label for="name"
                                     class="text-[10px] font-black uppercase tracking-[0.1em] text-slate-400 group-focus-within:text-brand-blue transition-colors ml-1">Meno
@@ -332,10 +317,10 @@
                                 <div class="relative">
                                     <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
                                         <i
-                                            class="fa-regular fa-user text-slate-400 group-focus-within:text-brand-blue transition-colors text-sm"></i>
+                                            class="fa-regular fa-user text-slate-400 group-focus-within:text-brand-blue group-hover:text-brand-blue transition-all duration-300 text-sm"></i>
                                     </div>
                                     <input type="text" id="name" name="name" required placeholder="Napr. Ján Novák"
-                                        class="w-full bg-slate-50/50 hover:bg-slate-50 border border-slate-200/60 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all text-sm font-medium text-brand-black placeholder:text-slate-300">
+                                        class="w-full bg-white hover:bg-slate-50 border-2 border-slate-100 hover:border-brand-blue/30 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all duration-300 text-sm font-medium text-brand-black placeholder:text-slate-300 shadow-sm hover:shadow-md focus:shadow-lg">
                                 </div>
                                 <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><i
                                         class="fa-solid fa-circle-exclamation mr-1"></i>Prosím, zadajte vaše meno a
@@ -351,10 +336,10 @@
                                         <div
                                             class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
                                             <i
-                                                class="fa-regular fa-envelope text-slate-400 group-focus-within:text-brand-blue transition-colors text-sm"></i>
+                                                class="fa-regular fa-envelope text-slate-400 group-focus-within:text-brand-blue group-hover:text-brand-blue transition-all duration-300 text-sm"></i>
                                         </div>
                                         <input type="email" id="email" name="email" required placeholder="vas@email.sk"
-                                            class="w-full bg-slate-50/50 hover:bg-slate-50 border border-slate-200/60 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all text-sm font-medium text-brand-black placeholder:text-slate-300">
+                                            class="w-full bg-white hover:bg-slate-50 border-2 border-slate-100 hover:border-brand-blue/30 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all duration-300 text-sm font-medium text-brand-black placeholder:text-slate-300 shadow-sm hover:shadow-md focus:shadow-lg">
                                     </div>
                                     <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><i
                                             class="fa-solid fa-circle-exclamation mr-1"></i>Zadajte platnú e-mailovú
@@ -368,11 +353,11 @@
                                         <div
                                             class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
                                             <i
-                                                class="fa-solid fa-phone text-slate-400 group-focus-within:text-brand-blue transition-colors text-sm"></i>
+                                                class="fa-solid fa-phone text-slate-400 group-focus-within:text-brand-blue group-hover:text-brand-blue transition-all duration-300 text-sm"></i>
                                         </div>
                                         <input type="tel" id="phone" name="phone" required
                                             placeholder="+421 9xx xxx xxx"
-                                            class="w-full bg-slate-50/50 hover:bg-slate-50 border border-slate-200/60 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all text-sm font-medium text-brand-black placeholder:text-slate-300">
+                                            class="w-full bg-white hover:bg-slate-50 border-2 border-slate-100 hover:border-brand-blue/30 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all duration-300 text-sm font-medium text-brand-black placeholder:text-slate-300 shadow-sm hover:shadow-md focus:shadow-lg">
                                     </div>
                                     <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><i
                                             class="fa-solid fa-circle-exclamation mr-1"></i>Prosím, zadajte vaše
@@ -386,10 +371,10 @@
                                 <div class="relative">
                                     <div class="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
                                         <i
-                                            class="fa-regular fa-comment-dots text-slate-400 group-focus-within:text-brand-blue transition-colors text-sm"></i>
+                                            class="fa-regular fa-comment-dots text-slate-400 group-focus-within:text-brand-blue group-hover:text-brand-blue transition-all duration-300 text-sm"></i>
                                     </div>
                                     <input type="text" id="subject" name="subject" placeholder="Záujem o spoluprácu..."
-                                        class="w-full bg-slate-50/50 hover:bg-slate-50 border border-slate-200/60 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all text-sm font-medium text-brand-black placeholder:text-slate-300">
+                                        class="w-full bg-white hover:bg-slate-50 border-2 border-slate-100 hover:border-brand-blue/30 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all duration-300 text-sm font-medium text-brand-black placeholder:text-slate-300 shadow-sm hover:shadow-md focus:shadow-lg">
                                 </div>
                             </div>
 
@@ -400,11 +385,11 @@
                                 <div class="relative">
                                     <div class="absolute top-5 left-5 pointer-events-none">
                                         <i
-                                            class="fa-solid fa-pen text-slate-400 group-focus-within:text-brand-blue transition-colors text-sm"></i>
+                                            class="fa-solid fa-pen text-slate-400 group-focus-within:text-brand-blue group-hover:text-brand-blue transition-all duration-300 text-sm"></i>
                                     </div>
                                     <textarea id="message" name="message" rows="5" required
                                         placeholder="Ako vám môžeme pomôcť? Popíšte nám vašu požiadavku..."
-                                        class="w-full bg-slate-50/50 hover:bg-slate-50 border border-slate-200/60 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all text-sm font-medium text-brand-black placeholder:text-slate-300 resize-none"></textarea>
+                                        class="w-full bg-white hover:bg-slate-50 border-2 border-slate-100 hover:border-brand-blue/30 pl-12 pr-6 py-4 rounded-2xl focus:outline-none focus:ring-4 focus:ring-brand-blue/10 focus:border-brand-blue focus:bg-white transition-all duration-300 text-sm font-medium text-brand-black placeholder:text-slate-300 shadow-sm hover:shadow-md focus:shadow-lg resize-none"></textarea>
                                 </div>
                                 <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><i
                                         class="fa-solid fa-circle-exclamation mr-1"></i>Prosím, napíšte vašu správu.</p>
