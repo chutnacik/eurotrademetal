@@ -19,6 +19,13 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+button,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+    font-weight: 800;
+}
+
 /* Custom layout helpers */
 .grid-lines {
     background-size: 40px 40px;
@@ -47,7 +54,7 @@ body {
     border: 1px solid #e5e7eb;
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
-    font-weight: 600;
+    font-weight: 800;
     transition: all 0.3s ease;
 }
 
@@ -177,7 +184,7 @@ body {
 
 .nav-link {
     font-size: 0.75rem;
-    font-weight: 700;
+    font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: #666;

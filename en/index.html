@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="sk">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EUROTRADEMETAL | Oceľ a metalurgia</title>
+    <title>EUROTRADEMETAL | Steel and Metallurgy</title>
     <!-- Tailwind CSS Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
     <!-- Swiper CSS -->
     <script>
@@ -44,9 +44,9 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex flex-1 items-center justify-center gap-12 px-8">
-                <a href="#about" class="nav-link">O spoločnosti</a>
-                <a href="produkty.html" class="nav-link">Produkty</a>
-                <a href="kontakt.html" class="nav-link">Kontakt</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="produkty.html" class="nav-link">Products</a>
+                <a href="kontakt.html" class="nav-link">Contact</a>
             </nav>
 
             <!-- Actions -->
@@ -55,9 +55,9 @@
                 <div class="relative group hidden md:block">
                     <button
                         class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-black hover:text-brand-blue transition-colors border-r border-slate-100 pr-6 mr-2">
-                        <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English"
                             class="w-5 h-auto rounded-sm object-cover shadow-sm opacity-90">
-                        <span>SK</span>
+                        <span>EN</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
                     </button>
                     <!-- Dropdown Content -->
@@ -66,23 +66,23 @@
                         <div class="flex flex-col py-2">
                             <a href="index.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-brand-blue bg-slate-50 border-l-2 border-brand-blue">
-                                <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
-                                    class="w-5 h-auto rounded-sm object-cover">
-                                <span>SK</span>
-                            </a>
-                            <a href="en/index.html"
-                                class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">
                                 <img src="https://flagcdn.com/w40/gb.png" alt="English"
-                                    class="w-5 h-auto rounded-sm object-cover opacity-60">
+                                    class="w-5 h-auto rounded-sm object-cover">
                                 <span>EN</span>
+                            </a>
+                            <a href="../index.html"
+                                class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">
+                                <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
+                                    class="w-5 h-auto rounded-sm object-cover opacity-60">
+                                <span>SK</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
                 <a href="kontakt.html"
-                    class="hidden sm:inline-flex items-center justify-center text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
-                    nám</a>
+                    class="hidden sm:inline-flex items-center justify-center text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Write
+                    to us</a>
 
                 <!-- Mobile Menu Toggle -->
                 <button id="mobile-menu-toggle"
@@ -103,16 +103,16 @@
     <div id="mobile-menu"
         class="fixed top-0 left-0 w-full h-[100dvh] bg-white z-[160] flex flex-col px-8 pt-24 pb-12 hidden-menu">
         <nav class="flex flex-col mb-12">
-            <a href="#about" class="mobile-nav-link">O spoločnosti</a>
-            <a href="produkty.html" class="mobile-nav-link">Produkty</a>
-            <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="produkty.html" class="mobile-nav-link">Products</a>
+            <a href="kontakt.html" class="mobile-nav-link">Contact</a>
         </nav>
 
         <div class="mt-auto pt-8">
-            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6">Rýchly kontakt</p>
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6">Quick contact</p>
             <div class="space-y-6">
                 <a href="tel:+421245248188" class="flex flex-col gap-1">
-                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Telefón</span>
+                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Phone</span>
                     <span class="font-extrabold text-brand-black text-lg">+421 2 4524 8188</span>
                 </a>
                 <a href="mailto:sekretariat@eurotrade.sk" class="flex flex-col gap-1">
@@ -123,8 +123,8 @@
 
             <div class="mt-12">
                 <a href="kontakt.html"
-                    class="block text-center bg-brand-black text-white py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl">Napíšte
-                    nám</a>
+                    class="block text-center bg-brand-black text-white py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl">Write
+                    to us</a>
             </div>
         </div>
     </div>
@@ -137,32 +137,32 @@
                 <div class="grid items-center gap-8 py-12 sm:py-14 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12 lg:py-16">
                     <div class="order-2 mx-auto flex flex-col items-center gap-4 max-w-2xl text-center lg:order-1 lg:mx-0 lg:items-start lg:text-left" data-reveal="down">
                         <span class="w-fit px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-brand-blue bg-brand-blue/10 rounded-full">
-                            Medzinárodný obchod s oceľou
+                            International steel trade
                         </span>
 
                         <div class="flex flex-col gap-3">
                             <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-black tracking-tight leading-[1]">
-                                Spoľahlivé dodávky ocele pre Slovensko a strednú Európu
+                                Reliable steel supply for Slovakia and Central Europe
                             </h1>
                             <p class="mx-auto text-base sm:text-lg font-semibold text-slate-600 max-w-xl leading-relaxed lg:mx-0">
-                                Zabezpečujeme import, reexport a predaj hutníckeho materiálu s dôrazom na kvalitu, kontinuitu dodávok a dlhodobé obchodné partnerstvá.
+                                We provide import, re-export and sales of metallurgical materials with a focus on quality, continuity of supply and long-term business partnerships.
                             </p>
                         </div>
 
                         <div class="flex flex-wrap items-center justify-center gap-3 pt-1 lg:justify-start">
                             <a href="produkty.html"
                                 class="inline-flex items-center justify-center rounded-full bg-brand-black px-6 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] text-white transition-all hover:bg-brand-blue">
-                                Produkty
+                                Products
                             </a>
                             <a href="kontakt.html"
                                 class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] text-brand-black transition-all hover:border-brand-black hover:bg-slate-50">
-                                Kontaktujte nás
+                                Contact us
                             </a>
                         </div>
                     </div>
 
                     <div class="order-1 flex justify-center lg:order-2 lg:justify-end" data-reveal="down" data-delay="100">
-                        <img src="logo-bigger.png" alt="Eurotrademetal logo" class="h-[180px] w-[180px] rounded-full object-cover sm:h-[220px] sm:w-[220px] lg:h-[280px] lg:w-[280px]">
+                        <img src="../logo-bigger.png" alt="Eurotrademetal logo" class="h-[180px] w-[180px] rounded-full object-cover sm:h-[220px] sm:w-[220px] lg:h-[280px] lg:w-[280px]">
                     </div>
                 </div>
             </div>
@@ -175,7 +175,7 @@
                     <div class="flex flex-col gap-6">
                         <div data-reveal="down" class="mx-auto max-w-3xl text-center">
                             <h2 class="text-3xl md:text-4xl lg:text-5xl font-extrabold text-brand-black tracking-tight leading-[1.05]">
-                                Dlhoročný partner pre obchod s oceľou v strednej Európe
+                                A long-standing partner for steel trading in Central Europe
                             </h2>
                         </div>
                     </div>
@@ -184,7 +184,7 @@
                         <div data-reveal="down"
                             class="relative min-h-[520px] rounded-[2rem] overflow-hidden bg-brand-black text-white">
                             <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
-                                alt="Priemyselná výroba a oceľové konštrukcie"
+                                alt="Industrial production and steel structures"
                                 class="absolute inset-0 h-full w-full object-cover">
                             <div class="absolute inset-0 bg-gradient-to-br from-brand-black/85 via-brand-black/65 to-brand-blue/65">
                             </div>
@@ -192,20 +192,18 @@
                                 <div class="max-w-2xl">
                                     <span
                                         class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.28em] text-white/80 backdrop-blur-sm">
-                                        Od roku 1996
+                                        Since 1996
                                     </span>
                                     <h3 class="mt-8 text-3xl sm:text-4xl font-extrabold leading-tight">
-                                        Skúsenosti z hutníckeho trhu prepájame s praktickým obchodným prístupom.
+                                        We combine metallurgical market experience with a practical business approach.
                                     </h3>
                                     <p class="mt-6 text-base sm:text-lg font-semibold leading-relaxed text-white/80 max-w-xl">
-                                        Spoločnosť bola založená pod názvom EUROFERROMETALL a od začiatku pôsobí v
-                                        oblasti čiernej metalurgie. Dnes sa orientuje na import, reexport a predaj
-                                        ocele konečným odberateľom.
+                                        The company was founded under the name EUROFERROMETALL and has operated in ferrous metallurgy from the beginning. Today it focuses on the import, re-export and sale of steel to end customers.
                                     </p>
                                     <div class="mt-8">
                                         <a href="produkty.html"
                                             class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] text-brand-black transition-all hover:bg-slate-100">
-                                            Zobraziť produkty
+                                            View products
                                         </a>
                                     </div>
                                 </div>
@@ -226,7 +224,7 @@
                                     <path d="m19 7 3 5-3 5"></path>
                                 </svg>
                                 <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Dlhodobo poznáme obchodné väzby medzi východnými a stredoeurópskymi trhmi.
+                                    We have long-term knowledge of trade links between Eastern and Central European markets.
                                 </p>
                             </div>
 
@@ -239,7 +237,7 @@
                                     <path d="m19 9-5 5-4-4-3 3"></path>
                                 </svg>
                                 <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Postupne sme sa viac orientovali na predaj ocele konečným odberateľom v regióne.
+                                    Over time, we have focused more on selling steel directly to end customers in the region.
                                 </p>
                             </div>
 
@@ -255,7 +253,7 @@
                                     </path>
                                 </svg>
                                 <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Import a reexport prispôsobujeme potrebám slovenského aj okolitého trhu.
+                                    We tailor import and re-export activities to the needs of the Slovak market and surrounding countries.
                                 </p>
                             </div>
 
@@ -267,8 +265,7 @@
                                     <path d="M20 7 9 18l-5-5"></path>
                                 </svg>
                                 <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Dôraz kladieme na spoľahlivosť dodávok, jasnú komunikáciu a dlhodobé obchodné
-                                    partnerstvá.
+                                    We place strong emphasis on reliable deliveries, clear communication and long-term business partnerships.
                                 </p>
                             </div>
                         </div>
@@ -288,10 +285,10 @@
                 <div class="mb-10 text-center md:text-left lg:mb-12">
                     <div data-reveal="down" class="max-w-2xl">
                         <span class="mb-5 block w-fit rounded-full bg-brand-blue/10 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-brand-blue mx-auto md:mx-0 sm:mb-6">
-                            Portfólio
+                            Portfolio
                         </span>
-                        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-brand-black sm:text-4xl lg:text-5xl">Naša ponuka produktov</h2>
-                        <p class="max-w-xl text-sm font-semibold leading-relaxed text-slate-600 sm:text-base">Dodávame materiály v kvalitách podľa EN pre výrobu, stavebníctvo aj dlhodobé priemyselné dodávky.</p>
+                        <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-brand-black sm:text-4xl lg:text-5xl">Our product offering</h2>
+                        <p class="max-w-xl text-sm font-semibold leading-relaxed text-slate-600 sm:text-base">We supply materials in EN grades for manufacturing, construction and long-term industrial deliveries.</p>
                     </div>
                 </div>
 
@@ -302,17 +299,17 @@
                             <div class="py-1">
                                 <button type="button" data-product-trigger="0" aria-expanded="true"
                                     class="group flex w-full items-center justify-between gap-4 py-3 text-left text-brand-black transition-all duration-300 ease-out hover:text-brand-blue sm:py-4">
-                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Oceľové plechy, zvitky, páska</span>
+                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Steel sheets, coils and strip</span>
                                     <span data-product-icon="0" class="shrink-0 text-[2rem] font-light leading-none text-brand-black transition-transform duration-500 ease-out">−</span>
                                 </button>
                                 <div data-product-panel="0" class="grid overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" style="grid-template-rows:1fr;opacity:1;">
                                     <div class="min-h-0 overflow-hidden">
                                     <p class="max-w-xl translate-y-0 text-sm font-semibold leading-relaxed text-slate-600 transition-all duration-500 ease-out sm:text-[0.98rem]">
-                                        Ploché oceľové materiály pre ďalšie spracovanie, výrobu aj pravidelné kontraktačné odbery s dôrazom na kvalitu, presnosť a stabilnú dostupnosť.
+                                        Flat steel materials for further processing, manufacturing and regular contract supplies with a focus on quality, precision and stable availability.
                                     </p>
                                     <a href="produkty.html#plechy"
                                         class="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-5 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-700 transition-all duration-300 hover:border-slate-300 hover:bg-slate-200 hover:text-brand-black">
-                                        Zistiť viac
+                                        Learn more
                                     </a>
                                     <div class="h-7 sm:h-9"></div>
                                     </div>
@@ -322,17 +319,17 @@
                             <div class="py-1">
                                 <button type="button" data-product-trigger="1" aria-expanded="false"
                                     class="group flex w-full items-center justify-between gap-4 py-3 text-left text-brand-black transition-all duration-300 ease-out hover:text-brand-blue sm:py-4">
-                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Oceľové profily, rúry, tyče</span>
+                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Steel profiles, tubes and bars</span>
                                     <span data-product-icon="1" class="shrink-0 text-[2rem] font-light leading-none text-brand-black transition-transform duration-500 ease-out">+</span>
                                 </button>
                                 <div data-product-panel="1" class="grid overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" style="grid-template-rows:0fr;opacity:0;">
                                     <div class="min-h-0 overflow-hidden">
                                     <p class="max-w-xl translate-y-0 text-sm font-semibold leading-relaxed text-slate-600 transition-all duration-500 ease-out sm:text-[0.98rem]">
-                                        Konštrukčné prvky pre priemysel, výrobu aj technické projekty, pri ktorých je dôležitá rozmerová presnosť, pevnosť a spoľahlivé dodacie termíny.
+                                        Structural elements for industry, manufacturing and technical projects where dimensional accuracy, strength and reliable delivery times matter.
                                     </p>
                                     <a href="produkty.html#profily"
                                         class="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-5 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-700 transition-all duration-300 hover:border-slate-300 hover:bg-slate-200 hover:text-brand-black">
-                                        Zistiť viac
+                                        Learn more
                                     </a>
                                     <div class="h-7 sm:h-9"></div>
                                     </div>
@@ -342,17 +339,17 @@
                             <div class="py-1">
                                 <button type="button" data-product-trigger="2" aria-expanded="false"
                                     class="group flex w-full items-center justify-between gap-4 py-3 text-left text-brand-black transition-all duration-300 ease-out hover:text-brand-blue sm:py-4">
-                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Betonárska oceľ, drôt</span>
+                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Reinforcing steel and wire</span>
                                     <span data-product-icon="2" class="shrink-0 text-[2rem] font-light leading-none text-brand-black transition-transform duration-500 ease-out">+</span>
                                 </button>
                                 <div data-product-panel="2" class="grid overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" style="grid-template-rows:0fr;opacity:0;">
                                     <div class="min-h-0 overflow-hidden">
                                     <p class="max-w-xl translate-y-0 text-sm font-semibold leading-relaxed text-slate-600 transition-all duration-500 ease-out sm:text-[0.98rem]">
-                                        Sortiment pre stavebné a armovacie riešenia s vysokou pevnosťou, stabilnou kvalitou a logistikou prispôsobenou potrebám projektu.
+                                        A range for construction and reinforcement solutions with high strength, stable quality and logistics tailored to project needs.
                                     </p>
                                     <a href="produkty.html#betonarska"
                                         class="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-5 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-700 transition-all duration-300 hover:border-slate-300 hover:bg-slate-200 hover:text-brand-black">
-                                        Zistiť viac
+                                        Learn more
                                     </a>
                                     <div class="h-7 sm:h-9"></div>
                                     </div>
@@ -362,17 +359,17 @@
                             <div class="py-1">
                                 <button type="button" data-product-trigger="3" aria-expanded="false"
                                     class="group flex w-full items-center justify-between gap-4 py-3 text-left text-brand-black transition-all duration-300 ease-out hover:text-brand-blue sm:py-4">
-                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Oceľové bramy</span>
+                                    <span class="text-[1.08rem] font-extrabold leading-tight sm:text-[1.45rem]">Steel gates</span>
                                     <span data-product-icon="3" class="shrink-0 text-[2rem] font-light leading-none text-brand-black transition-transform duration-500 ease-out">+</span>
                                 </button>
                                 <div data-product-panel="3" class="grid overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" style="grid-template-rows:0fr;opacity:0;">
                                     <div class="min-h-0 overflow-hidden">
                                     <p class="max-w-xl translate-y-0 text-sm font-semibold leading-relaxed text-slate-600 transition-all duration-500 ease-out sm:text-[0.98rem]">
-                                        Doplnkový sortiment, ktorým vieme rozšíriť dodávku podľa konkrétnych technických požiadaviek zákazníka a charakteru realizácie.
+                                        Additional product range that allows us to expand deliveries according to specific technical requirements and project needs.
                                     </p>
                                     <a href="produkty.html#bramy"
                                         class="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-5 py-3 text-[11px] font-black uppercase tracking-[0.2em] text-slate-700 transition-all duration-300 hover:border-slate-300 hover:bg-slate-200 hover:text-brand-black">
-                                        Zistiť viac
+                                        Learn more
                                     </a>
                                     <div class="h-7 sm:h-9"></div>
                                     </div>
@@ -383,13 +380,13 @@
                     </div>
 
                     <div data-reveal="down" data-delay="150" class="order-1 relative min-h-[260px] overflow-hidden rounded-[1.45rem] bg-white sm:min-h-[320px] lg:order-2 lg:sticky lg:top-28 lg:min-h-[460px]">
-                        <img data-product-image="0" src="assets/images/ocelova-paska.jpg" alt="Oceľové plechy, zvitky a páska"
+                        <img data-product-image="0" src="../assets/images/ocelova-paska.jpg" alt="Steel sheets, coils and strip"
                             class="absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
-                        <img data-product-image="1" src="assets/images/ocelova-profily-rury-tyce.jpg" alt="Oceľové profily, rúry a tyče"
+                        <img data-product-image="1" src="../assets/images/ocelova-profily-rury-tyce.jpg" alt="Steel profiles, tubes and bars"
                             class="absolute inset-0 h-full w-full object-cover opacity-0 scale-[1.03] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
-                        <img data-product-image="2" src="assets/images/ovelove-tyce.jpg" alt="Betonárska oceľ a drôt"
+                        <img data-product-image="2" src="../assets/images/ovelove-tyce.jpg" alt="Reinforcing steel and wire"
                             class="absolute inset-0 h-full w-full object-cover opacity-0 scale-[1.03] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
-                        <img data-product-image="3" src="assets/images/ocelove-bramy.jpg" alt="Oceľové bramy"
+                        <img data-product-image="3" src="../assets/images/ocelove-bramy.jpg" alt="Steel gates"
                             class="absolute inset-0 h-full w-full object-cover opacity-0 scale-[1.03] transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
                         <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-brand-black/20 to-transparent"></div>
                     </div>
@@ -400,14 +397,16 @@
         <!-- Partners / Suppliers -->
         <section id="partners" class="py-20 bg-brand-black text-white relative overflow-hidden">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
-                <p data-reveal="down" class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 opacity-50">Kľúčoví
-                    dodávatelia</p>
+                <p data-reveal="down" class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 opacity-50">Key
+                    suppliers</p>
                 <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-70">
                     <span data-reveal="down" data-delay="50"
                         class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">U.
                         S. STEEL</span>
                     <span data-reveal="down" data-delay="100"
                         class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">METINVEST</span>
+                    <span data-reveal="down" data-delay="150"
+                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">AZOVSTAL</span>
                     <span data-reveal="down" data-delay="200"
                         class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">DUNAFERR</span>
                     <span data-reveal="down" data-delay="250"
@@ -421,7 +420,7 @@
         <section class="relative py-24 overflow-hidden bg-brand-gray/30 border-t border-slate-100">
             <!-- Focused Central Europe Map Background -->
             <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
-                <img src="central_europe_map.svg"
+                <img src="../central_europe_map.svg"
                     class="w-full h-full object-contain scale-[1.8] grayscale opacity-25 translate-y-6"
                     alt="Central Europe Map CTA">
                 <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-transparent to-white/80"></div>
@@ -432,12 +431,12 @@
 
 
                 <h2 data-reveal="down" data-delay="100" class="heading-l text-brand-black mb-6">
-                    Spoľahlivý partner pre <br> vaše projekty v strednej Európe.
+                    A reliable partner for <br> your projects in Central Europe.
                 </h2>
 
                 <p data-reveal="down" data-delay="150"
                     class="mx-auto mt-5 max-w-2xl text-base font-semibold leading-relaxed text-slate-600 sm:text-lg">
-                    Ak hľadáte stabilné dodávky hutníckeho materiálu, radi s vami prejdeme konkrétny dopyt aj technické požiadavky.
+                    If you are looking for stable metallurgical material supplies, we will be happy to review your specific enquiry and technical requirements with you.
                 </p>
 
                 <div data-reveal="down" data-delay="200"
@@ -448,7 +447,7 @@
                     </a>
                     <a href="kontakt.html"
                         class="bg-brand-blue text-white px-12 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-darkBlue transition-all shadow-xl shadow-brand-blue/30">
-                        Kontakt
+                        Contact
                     </a>
                 </div>
             </div>
@@ -460,8 +459,8 @@
     <footer class="bg-white text-slate-500 py-12 border-t border-slate-100">
         <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
             <div class="flex flex-col items-center justify-center gap-3 text-[10px] font-bold uppercase tracking-widest sm:flex-row sm:gap-5">
-                <span>&copy; 2026 Eurotrademetal, spol. s r.o. Všetky práva vyhradené.</span>
-                <a href="privacy.html" class="text-brand-blue hover:text-brand-darkBlue transition-colors">Ochrana osobných údajov</a>
+                <span>&copy; 2026 Eurotrademetal, spol. s r.o. All rights reserved.</span>
+                <a href="privacy.html" class="text-brand-blue hover:text-brand-darkBlue transition-colors">Privacy policy</a>
             </div>
         </div>
     </footer>

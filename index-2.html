@@ -17,8 +17,8 @@
                 extend: {
                     colors: {
                         brand: {
-                            blue: '#0056b3',
-                            darkBlue: '#003d80',
+                            blue: '#0056b3', // Hlavná modrá
+                            darkBlue: '#003d80', // Tmavšia modrá pre akcenty
                             black: '#0a0a0a',
                             gray: '#f5f5f5'
                         }
@@ -36,22 +36,22 @@
 
     <!-- Header Navigation -->
     <header class="fixed top-0 left-0 w-full bg-white z-[170] border-b border-slate-100">
-        <div class="max-w-[1400px] mx-auto flex items-center h-20 px-6 lg:px-12">
+        <div class="max-w-[1400px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12">
             <!-- Logo -->
-            <a href="index.html" class="flex items-center gap-2">
+            <a href="index-2.html" class="flex items-center gap-2">
                 <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span
                         class="text-brand-blue">metal</span></span>
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-12 ml-auto mr-10 xl:mr-14">
+            <nav class="hidden lg:flex items-center gap-12">
                 <a href="#about" class="nav-link">O spoločnosti</a>
                 <a href="#products" class="nav-link">Produkty</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </nav>
 
             <!-- Actions -->
-            <div class="flex items-center gap-6 ml-auto lg:ml-0">
+            <div class="flex items-center gap-6">
                 <!-- Language Dropdown -->
                 <div class="relative group hidden md:block">
                     <button
@@ -81,6 +81,11 @@
                     </div>
                 </div>
 
+                <div class="hidden sm:hidden flex-col items-end text-right">
+                    <span
+                        class="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none">Sekretariát</span>
+                    <span class="text-xs font-extrabold text-brand-black">+421 2 4524 8188</span>
+                </div>
                 <a href="kontakt.html"
                     class="hidden sm:inline-flex items-center justify-center text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
                     nám</a>
@@ -130,165 +135,132 @@
         </div>
     </div>
 
+
+
     <main class="pt-20">
-        <!-- Hero Section V2 -->
-        <section class="relative bg-white border-b border-slate-100 overflow-hidden">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(0,86,179,0.08),transparent_45%)]"></div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-8 lg:px-12">
-                <div class="grid items-center gap-8 py-14 sm:py-16 lg:grid-cols-[minmax(0,1fr)_360px] lg:gap-12 lg:py-20">
-                    <div class="order-2 flex flex-col gap-4 max-w-2xl lg:order-1" data-reveal="down">
-                        <span class="w-fit px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-brand-blue bg-brand-blue/10 rounded-full">
-                            Medzinárodný obchod s oceľou
-                        </span>
 
-                        <div class="flex flex-col gap-3">
-                            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-black tracking-tight leading-[1]">
-                                Spoľahlivé dodávky ocele pre Slovensko a strednú Európu
-                            </h1>
-                            <p class="text-base sm:text-lg font-semibold text-slate-600 max-w-xl leading-relaxed">
-                                Zabezpečujeme import, reexport a predaj hutníckeho materiálu s dôrazom na kvalitu, kontinuitu dodávok a dlhodobé obchodné partnerstvá.
-                            </p>
-                        </div>
+        <!-- Hero Section -->
+        <section class="bg-white border-b border-slate-100 py-10 lg:py-20 relative overflow-hidden">
+            <!-- Central Europe Map Background for Hero -->
+            <div class="absolute inset-0 opacity-15 pointer-events-none flex items-center justify-center">
+                <img src="central_europe_map.svg"
+                    class="w-full h-full object-contain scale-[1.8] translate-x-1/4 grayscale"
+                    alt="Central Europe Map Hero">
+                <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-white via-transparent to-white"></div>
+            </div>
 
-                        <div class="flex flex-wrap items-center gap-3 pt-1">
-                            <a href="#products"
-                                class="inline-flex items-center justify-center rounded-full bg-brand-black px-6 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] text-white transition-all hover:bg-brand-blue">
-                                Produkty
-                            </a>
-                            <a href="kontakt.html"
-                                class="inline-flex items-center justify-center rounded-full border border-slate-300 bg-white px-6 py-3.5 text-[11px] font-black uppercase tracking-[0.2em] text-brand-black transition-all hover:border-brand-black hover:bg-slate-50">
-                                Kontaktujte nás
-                            </a>
+            <!-- Subtle Blue Gradient Semi-circle -->
+            <div class="hero-gradient"></div>
+
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-12 mb-16">
+                    <div class="lg:w-3/4">
+                        <div data-reveal="down" data-delay="50"
+                            class="flex items-center gap-3 text-brand-blue font-bold text-xs uppercase tracking-[0.3em] mb-8">
+                            <span class="w-8 h-[1px] bg-brand-blue"></span>
+                            Partner v metalurgii od roku 1996
                         </div>
+                        <h1 data-reveal="down" data-delay="150" class="heading-xl text-brand-black leading-none">
+                            Medzinárodný obchod <br class="hidden lg:block"> s oceľou a hutníckym materiálom.
+                        </h1>
                     </div>
 
-                    <div class="order-1 flex justify-center lg:order-2 lg:justify-end" data-reveal="down" data-delay="100">
-                        <img src="logo-bigger.png" alt="Eurotrademetal logo" class="h-[180px] w-[180px] rounded-full object-cover sm:h-[220px] sm:w-[220px] lg:h-[280px] lg:w-[280px]">
+                    <!-- Circular Logo Sticker -->
+                    <div data-reveal="down" data-delay="250"
+                        class="relative w-48 h-48 flex-shrink-0 hidden lg:flex items-center justify-center">
+                        <svg class="sticker-rotate absolute w-full h-full text-brand-blue opacity-10 fill-current"
+                            viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="1"
+                                stroke-dasharray="2 2" />
+                        </svg>
+                        <img src="logo-bigger.png" alt="Eurotrademetal Logo"
+                            class="w-40 h-40 object-contain relative z-10 rounded-full bg-white p-2">
                     </div>
+                </div>
+
+                <!-- Main Hero Image -->
+                <div data-reveal="down" data-delay="300"
+                    class="relative w-full h-[400px] lg:h-[600px] rounded-[1rem] overflow-hidden group shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
+                        alt="Hutnícky závod a výroba ocele"
+                        class="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-black/60 via-transparent to-transparent">
+                    </div>
+
                 </div>
             </div>
         </section>
 
+
         <!-- About Section -->
-        <section id="about" class="bg-slate-50 py-24 lg:py-32 border-b border-slate-200 overflow-hidden">
-            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
-                <div class="flex flex-col gap-10 md:gap-14">
-                    <div class="flex flex-col gap-6">
-                        <div data-reveal="down" class="max-w-3xl">
+        <section id="about" class="bg-slate-50 py-20 lg:py-24 border-b border-slate-200">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20">
+                <div data-reveal="down">
+                    <span class="text-brand-blue font-bold text-xs uppercase tracking-[0.3em] mb-6 block">O
+                        spoločnosti</span>
+                    <h2 class="heading-l text-brand-black mb-8">
+                        História a vízia <br> spoločnosti.
+                    </h2>
+                    <div class="text-slate-600 text-lg leading-relaxed space-y-6">
+                        <p>
+                            Spoločnosť <strong class="text-brand-black">EUROTRADEMETAL</strong> bola založená
+                            spoločenskou zmluvou dňa 18.12.1996 pod názvom EUROFERROMETALL. Jej zakladateľom bola
+                            cyperská spoločnosť ROHSTOFF HOLDING LIMITED.
+                        </p>
+                        <p>
+                            Zámerom bolo vytvoriť spoločnosť, ktorej manažéri využijú jazykové a teritoriálne možnosti
+                            spolupráce medzi krajinami bývalého Sovietskeho zväzu a centrálnou Európou. Od svojho vzniku
+                            sa spoločnosť zaoberala výlučne obchodom v odvetví čiernej metalurgie.
+                        </p>
+                        <p>
+                            Globalizácia a vstup do EU spôsobili, že spoločnosť sa začala viac orientovať na predaj
+                            ocele konečným spotrebiteľom. Ide o importy a reexporty ocele z Poľska a Ukrajiny na náš trh
+                            a na trhy Česka a Maďarska.
+                        </p>
+                    </div>
+                </div>
+                <div data-reveal="down" data-delay="150"
+                    class="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 flex flex-col justify-center">
+                    <h3 class="text-2xl font-extrabold mb-8 flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg> Základné údaje
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">Obchodné meno</span>
+                            <span class="font-extrabold text-brand-black text-right">EUROTRADEMETAL, spol. s r.o.</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">IČO</span>
+                            <span class="font-extrabold text-brand-black">35 707 429</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">DIČ</span>
+                            <span class="font-extrabold text-brand-black">2020265082</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">Deň zápisu</span>
+                            <span class="font-extrabold text-brand-black">21.01.1997</span>
+                        </li>
+                        <li class="pt-2">
                             <span
-                                class="inline-flex items-center rounded-full border border-brand-blue/15 bg-white px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.28em] text-brand-blue shadow-sm">
-                                O spoločnosti
-                            </span>
-                            <h2 class="heading-l text-brand-black mt-6 mb-6">
-                                Dlhoročný partner pre obchod s oceľou v strednej Európe.
-                            </h2>
-                            <p class="text-base sm:text-lg font-semibold text-slate-600 max-w-2xl leading-relaxed">
-                                EUROTRADEMETAL nadväzuje na dlhoročné skúsenosti v hutníckom obchode a zameriava sa na
-                                spoľahlivé dodávky ocele pre slovenský aj okolitý trh.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 xl:grid-cols-2 gap-5 lg:gap-6">
-                        <div data-reveal="down"
-                            class="relative min-h-[520px] rounded-[2rem] overflow-hidden bg-brand-black text-white">
-                            <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
-                                alt="Priemyselná výroba a oceľové konštrukcie"
-                                class="absolute inset-0 h-full w-full object-cover">
-                            <div class="absolute inset-0 bg-gradient-to-br from-brand-black/85 via-brand-black/65 to-brand-blue/65">
-                            </div>
-                            <div class="relative h-full flex flex-col justify-between p-8 sm:p-10 lg:p-12 gap-12">
-                                <div class="max-w-2xl">
-                                    <span
-                                        class="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-extrabold uppercase tracking-[0.28em] text-white/80 backdrop-blur-sm">
-                                        Od roku 1996
-                                    </span>
-                                    <h3 class="mt-8 text-3xl sm:text-4xl font-extrabold leading-tight">
-                                        Skúsenosti z hutníckeho trhu prepájame s praktickým obchodným prístupom.
-                                    </h3>
-                                    <p class="mt-6 text-base sm:text-lg font-semibold leading-relaxed text-white/80 max-w-xl">
-                                        Spoločnosť bola založená pod názvom EUROFERROMETALL a od začiatku pôsobí v
-                                        oblasti čiernej metalurgie. Dnes sa orientuje na import, reexport a predaj
-                                        ocele konečným odberateľom.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:gap-6">
-                            <div data-reveal="down" data-delay="100"
-                                class="rounded-[1.75rem] border border-slate-300 p-8 flex flex-col gap-12 min-h-[248px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-7 h-7 text-brand-blue">
-                                    <path d="M12 2v20"></path>
-                                    <path d="m17 5-5-3-5 3"></path>
-                                    <path d="m17 19-5 3-5-3"></path>
-                                    <path d="M2 12h20"></path>
-                                    <path d="m5 7-3 5 3 5"></path>
-                                    <path d="m19 7 3 5-3 5"></path>
-                                </svg>
-                                <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Dlhodobo poznáme obchodné väzby medzi východnými a stredoeurópskymi trhmi.
-                                </p>
-                            </div>
-
-                            <div data-reveal="down" data-delay="150"
-                                class="rounded-[1.75rem] border border-slate-300 p-8 flex flex-col gap-12 min-h-[248px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-7 h-7 text-brand-blue">
-                                    <path d="M3 3v18h18"></path>
-                                    <path d="m19 9-5 5-4-4-3 3"></path>
-                                </svg>
-                                <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Postupne sme sa viac orientovali na predaj ocele konečným odberateľom v regióne.
-                                </p>
-                            </div>
-
-                            <div data-reveal="down" data-delay="200"
-                                class="rounded-[1.75rem] border border-slate-300 p-8 flex flex-col gap-12 min-h-[248px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-7 h-7 text-brand-blue">
-                                    <path d="M16 16h6"></path>
-                                    <path d="M19 13v6"></path>
-                                    <path
-                                        d="M16.403 7.5A5 5 0 1 0 6 12c0 1.15.193 2.264.548 3.304A4 4 0 0 0 10.303 18H16">
-                                    </path>
-                                </svg>
-                                <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Import a reexport prispôsobujeme potrebám slovenského aj okolitého trhu.
-                                </p>
-                            </div>
-
-                            <div data-reveal="down" data-delay="250"
-                                class="rounded-[1.75rem] border border-slate-300 p-8 flex flex-col gap-12 min-h-[248px]">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-                                    stroke-linejoin="round" class="w-7 h-7 text-brand-blue">
-                                    <path d="M20 7 9 18l-5-5"></path>
-                                </svg>
-                                <p class="text-lg text-brand-black font-semibold leading-relaxed">
-                                    Dôraz kladieme na spoľahlivosť dodávok, jasnú komunikáciu a dlhodobé obchodné
-                                    partnerstvá.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                                class="text-sm font-bold text-slate-400 uppercase tracking-wider block mb-2">Sídlo</span>
+                            <span class="font-extrabold text-brand-black text-lg">Budyšínska 38, 831 02 Bratislava</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
 
         <!-- Products Section (Slider Style) -->
-        <section id="products" class="bg-[#EEF4F4] py-24 lg:py-40 overflow-hidden">
+        <section id="products" class="bg-[#EEF4F4] py-20 lg:py-28 overflow-hidden">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-center md:text-left">
                     <div data-reveal="down" class="max-w-xl">
                         <span
                             class="text-brand-black font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Portfólio</span>
                         <h2 class="heading-l text-brand-black mb-6">Naša ponuka produktov</h2>
-                        <p class="text-base sm:text-lg font-semibold text-slate-600 max-w-xl leading-relaxed">Dodávame materiály v kvalitách podľa EN.</p>
+                        <p class="text-slate-600 font-medium text-lg">Dodávame materiály v kvalitách podľa EN.</p>
                     </div>
                     <!-- Navigation Buttons -->
                     <div data-reveal="down" data-delay="150" class="flex gap-4">
@@ -436,7 +408,7 @@
         </div>
 
         <!-- Partners / Suppliers -->
-        <section id="partners" class="py-24 bg-brand-black text-white relative overflow-hidden">
+        <section id="partners" class="py-20 bg-brand-black text-white relative overflow-hidden">
             <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
                 <p data-reveal="down" class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 opacity-50">Kľúčoví
                     dodávatelia</p>
@@ -446,8 +418,6 @@
                         S. STEEL</span>
                     <span data-reveal="down" data-delay="100"
                         class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">METINVEST</span>
-                    <span data-reveal="down" data-delay="150"
-                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">AZOVSTAL</span>
                     <span data-reveal="down" data-delay="200"
                         class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">DUNAFERR</span>
                     <span data-reveal="down" data-delay="250"
@@ -458,7 +428,7 @@
 
 
         <!-- CTA Section (Europe Focus) -->
-        <section class="relative py-32 overflow-hidden bg-brand-gray/30 border-t border-slate-100">
+        <section class="relative py-24 overflow-hidden bg-brand-gray/30 border-t border-slate-100">
             <!-- Focused Central Europe Map Background -->
             <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
                 <img src="central_europe_map.svg"
@@ -541,7 +511,7 @@
         new Swiper('.portfolio-swiper', {
             slidesPerView: 1,
             spaceBetween: 30,
-            loop: false, 
+            loop: false, // Changed to false to support hiding navigation when not needed
             watchOverflow: true,
             grabCursor: true,
             pagination: {
@@ -552,7 +522,7 @@
             navigation: {
                 nextEl: '.swiper-btn-next',
                 prevEl: '.swiper-btn-prev',
-                lockClass: 'hidden', 
+                lockClass: 'hidden', // This will hide arrows when slider is locked (no overflow)
             },
             breakpoints: {
                 640: {
@@ -705,7 +675,7 @@
                     <div>
                         <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Hlavní dodávatelia</p>
                         <ul class="space-y-3 text-[13px] font-medium">
-                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M3 21h18"></path><path d="M7 21V7l5-2 5 2v14"></path><path d="M7 13h10"></path><path d="M12 13V7"></path></svg> U. S. Steel Košice, Slovensko</li>
+                            <li class="flex items-center gap-3"><i class="fa-solid fa-industry opacity-30"></i> U. S. Steel Košice, Slovensko</li>
                         </ul>
                     </div>
                 `
@@ -719,15 +689,12 @@
             const content = document.getElementById('modal-content');
 
             document.getElementById('modal-title').innerText = product.title;
-            // Modal icon handling placeholder
-            const iconBody = document.getElementById('modal-icon');
-            iconBody.className = `fa-solid ${product.icon}`; 
-            
+            document.getElementById('modal-icon').className = `fa-solid ${product.icon}`;
             document.getElementById('modal-icon-container').style.backgroundColor = product.icon === 'fa-shapes' ? '#0B0C10' : product.color;
             document.getElementById('modal-body').innerHTML = product.content;
 
             modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden'; // Prevent scroll
 
             setTimeout(() => {
                 overlay.style.opacity = '1';
@@ -745,10 +712,12 @@
 
             setTimeout(() => {
                 modal.classList.add('hidden');
-                document.body.style.overflow = '';
+                document.body.style.overflow = ''; // Restore scroll
             }, 500);
         }
 
+
+        // Close on overlay click
         document.getElementById('modal-overlay').addEventListener('click', closeProductModal);
 
         // Mobile Menu Toggle Logic
@@ -790,6 +759,7 @@
             });
         });
 
+        // ── Scroll-reveal via IntersectionObserver ──
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -801,5 +771,8 @@
 
         document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
     </script>
+
+
 </body>
+
 </html>
