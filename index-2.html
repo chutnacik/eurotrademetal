@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EUROTRADEMETAL | Oceľ a metalurgia</title>
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#0056b3',
+                            darkBlue: '#003d80',
+                            black: '#0a0a0a',
+                            gray: '#f5f5f5'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Manrope', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-header {
+            background: transparent;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.4s ease;
+        }
+        .is-scrolled .glass-header {
+            background: white;
+            border-bottom: 1px solid #f1f5f9;
+            box-shadow: 0 4px 20px -10px rgba(0,0,0,0.1);
+            height: 70px !important;
+        }
+    </style>
+</head>
+
+<body class="bg-brand-gray overflow-x-hidden selection:bg-brand-blue selection:text-white">
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="fixed top-0 left-0 w-full z-[170] glass-header">
+        <div class="max-w-[1400px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12 transition-all duration-500">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2">
+                <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span
+                        class="text-brand-blue">metal</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-12">
+                <a href="#about" class="nav-link">O spoločnosti</a>
+                <a href="#products" class="nav-link">Produkty</a>
+                <a href="kontakt.html" class="nav-link">Kontakt</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-6">
+                <!-- Language Dropdown -->
+                <div class="relative group hidden md:block">
+                    <button
+                        class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-black hover:text-brand-blue transition-colors border-r border-slate-100 pr-6 mr-2">
+                        <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
+                            class="w-5 h-auto rounded-sm object-cover shadow-sm opacity-90">
+                        <span>SK</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <!-- Dropdown Content -->
+                    <div
+                        class="absolute top-full left-0 mt-2 w-32 bg-white border border-slate-100 shadow-2xl rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all transform origin-top translate-y-2 group-hover:translate-y-0 z-[110] overflow-hidden">
+                        <div class="flex flex-col py-2">
+                            <a href="#"
+                                class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-brand-blue bg-slate-50 border-l-2 border-brand-blue">
+                                <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
+                                    class="w-5 h-auto rounded-sm object-cover">
+                                <span>SK</span>
+                            </a>
+                            <a href="#"
+                                class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">
+                                <img src="https://flagcdn.com/w40/gb.png" alt="English"
+                                    class="w-5 h-auto rounded-sm object-cover opacity-60">
+                                <span>EN</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="kontakt.html"
+                    class="hidden sm:inline-flex items-center justify-center text-[11px] font-[800] uppercase tracking-widest bg-brand-blue text-white px-8 py-3.5 rounded-full hover:bg-brand-darkBlue transition-all shadow-lg shadow-brand-blue/30">Napíšte
+                    nám</a>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="mobile-menu-toggle"
+                    class="lg:hidden flex flex-col justify-center items-center h-10 w-10 relative z-[200]"
+                    aria-label="Toggle Menu">
+                    <div class="flex flex-col gap-[6px]">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-black/40 backdrop-blur-sm z-[150] hidden-overlay"></div>
+    <div id="mobile-menu"
+        class="fixed top-0 left-0 w-full h-[100dvh] bg-white z-[160] flex flex-col px-8 pt-24 pb-12 hidden-menu">
+        <nav class="flex flex-col mb-12">
+            <a href="#about" class="mobile-nav-link">O spoločnosti</a>
+            <a href="#products" class="mobile-nav-link">Produkty</a>
+            <a href="kontakt.html" class="mobile-nav-link">Kontakt</a>
+        </nav>
+
+        <div class="mt-auto pt-8">
+            <p class="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-6">Rýchly kontakt</p>
+            <div class="space-y-6">
+                <a href="tel:+421245248188" class="flex flex-col gap-1">
+                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">Telefón</span>
+                    <span class="font-extrabold text-brand-black text-lg">+421 2 4524 8188</span>
+                </a>
+                <a href="mailto:sekretariat@eurotrade.sk" class="flex flex-col gap-1">
+                    <span class="text-[10px] font-bold text-brand-blue uppercase tracking-widest">E-mail</span>
+                    <span class="font-extrabold text-brand-black text-lg">sekretariat@eurotrade.sk</span>
+                </a>
+            </div>
+
+            <div class="mt-12">
+                <a href="kontakt.html"
+                    class="block text-center bg-brand-black text-white py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] shadow-xl">Napíšte
+                    nám</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section V2 -->
+        <section class="relative bg-white border-b border-slate-100 min-h-[85vh] flex flex-col lg:flex-row overflow-hidden">
+            <!-- Left Side: Image -->
+            <div class="lg:w-1/2 relative min-h-[500px] lg:min-h-0">
+                <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
+                    alt="Hutnícky závod" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-brand-black/10"></div>
+                
+                <!-- Circular Logo (Bottom Right of Image) -->
+                <div class="absolute bottom-12 right-12 z-20">
+                    <div class="relative w-32 h-32 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/20"></div>
+                        <img src="logo-bigger.png" alt="Logo" class="w-24 h-24 object-contain relative z-10 rounded-full bg-white p-3 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="lg:w-1/2 p-12 lg:p-24 flex flex-col justify-center">
+                <div data-reveal="down" class="max-w-2xl pt-24 lg:pt-0">
+                    <h2 class="text-4xl lg:text-6xl font-extrabold text-brand-black leading-[1.1] tracking-tighter mb-10">
+                        Váš Partner <br>
+                        V Oblasti <br>
+                        <span class="text-slate-300">Metalurgie</span>
+                    </h2>
+
+                    <div class="pl-8 border-l-2 border-slate-100 mb-12">
+                        <p class="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
+                            Zabezpečujeme medzinárodný obchod s oceľou a hutníckym materiálom. Zameriavame sa na import a reexport najvyššej kvality pre trhy strednej Európy.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-center gap-10">
+                        <a href="#about" class="group bg-brand-black text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-[0.2em] flex items-center gap-4 transition-all hover:bg-brand-blue">
+                            <span>O spoločnosti</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </a>
+
+                        <div class="flex items-center gap-4">
+                            <div class="flex -space-x-3">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="User 1">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="User 2">
+                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=100&auto=format&fit=crop" alt="User 3">
+                            </div>
+                            <span class="text-[10px] font-black text-brand-black uppercase tracking-wider underline underline-offset-4 decoration-slate-200">Tisíce ton dodaného materiálu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-slate-50 py-24 lg:py-32 border-b border-slate-200">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-20">
+                <div data-reveal="down">
+                    <span class="text-brand-blue font-bold text-xs uppercase tracking-[0.3em] mb-6 block">O
+                        spoločnosti</span>
+                    <h2 class="heading-l text-brand-black mb-8">
+                        História a vízia <br> spoločnosti.
+                    </h2>
+                    <div class="text-slate-600 text-lg leading-relaxed space-y-6">
+                        <p>
+                            Spoločnosť <strong class="text-brand-black">EUROTRADEMETAL</strong> bola založená
+                            spoločenskou zmluvou dňa 18.12.1996 pod názvom EUROFERROMETALL. Jej zakladateľom bola
+                            cyperská spoločnosť ROHSTOFF HOLDING LIMITED.
+                        </p>
+                        <p>
+                            Zámerom bolo vytvoriť spoločnosť, ktorej manažéri využijú jazykové a teritoriálne možnosti
+                            spolupráce medzi krajinami bývalého Sovietskeho zväzu a centrálnou Európou. Od svojho vzniku
+                            sa spoločnosť zaoberala výlučne obchodom v odvetví čiernej metalurgie.
+                        </p>
+                        <p>
+                            Globalizácia a vstup do EU spôsobili, že spoločnosť sa začala viac orientovať na predaj
+                            ocele konečným spotrebiteľom. Ide o importy a reexporty ocele z Poľska a Ukrajiny na náš trh
+                            a na trhy Česka a Maďarska.
+                        </p>
+                    </div>
+                </div>
+                <div data-reveal="down" data-delay="150"
+                    class="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 flex flex-col justify-center">
+                    <h3 class="text-2xl font-extrabold mb-8 flex items-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg> Základné údaje
+                    </h3>
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">Obchodné meno</span>
+                            <span class="font-extrabold text-brand-black text-right">EUROTRADEMETAL, spol. s r.o.</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">IČO</span>
+                            <span class="font-extrabold text-brand-black">35 707 429</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">DIČ</span>
+                            <span class="font-extrabold text-brand-black">2020265082</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-slate-100 pb-4">
+                            <span class="text-sm font-bold text-slate-400 uppercase tracking-wider">Deň zápisu</span>
+                            <span class="font-extrabold text-brand-black">21.01.1997</span>
+                        </li>
+                        <li class="pt-2">
+                            <span
+                                class="text-sm font-bold text-slate-400 uppercase tracking-wider block mb-2">Sídlo</span>
+                            <span class="font-extrabold text-brand-black text-lg">Budyšínska 38, 831 02 Bratislava</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section (Slider Style) -->
+        <section id="products" class="bg-[#EEF4F4] py-24 lg:py-40 overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-center md:text-left">
+                    <div data-reveal="down" class="max-w-xl">
+                        <span
+                            class="text-brand-black font-bold text-xs uppercase tracking-[0.3em] mb-4 block">Portfólio</span>
+                        <h2 class="heading-l text-brand-black mb-6">Naša ponuka produktov</h2>
+                        <p class="text-slate-600 font-medium text-lg">Dodávame materiály v kvalitách podľa EN.</p>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div data-reveal="down" data-delay="150" class="flex gap-4">
+                        <button
+                            class="swiper-btn-prev w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-brand-black hover:bg-brand-black hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                        </button>
+                        <button
+                            class="swiper-btn-next w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-brand-black hover:bg-brand-black hover:text-white transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Swiper -->
+                <div class="swiper portfolio-swiper !overflow-visible">
+                    <div class="swiper-wrapper">
+                        <!-- Product 1: Plechy -->
+                        <div class="swiper-slide h-auto">
+                            <div data-reveal="down" data-delay="50"
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-[#95EFCF] text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Oceľové plechy, zvitky, páska</h3>
+
+                                <button onclick="openProductModal(0)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 2: Profily -->
+                        <div class="swiper-slide h-auto">
+                            <div data-reveal="down" data-delay="150"
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-brand-gray text-brand-black rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300 border border-slate-200">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.3 10a.7.7 0 0 1-.626-1.079L11.434 2.1a.7.7 0 0 1 1.132 0l3.76 6.821A.7.7 0 0 1 15.7 10H8.3Z"></path><rect x="3" y="14" width="7" height="7" rx="1"></rect><circle cx="17.5" cy="17.5" r="3.5"></circle></svg>
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Oceľové profily, rúry, tyče</h3>
+
+                                <button onclick="openProductModal(1)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 3: Betonárska -->
+                        <div class="swiper-slide h-auto">
+                            <div data-reveal="down" data-delay="250"
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-[#F33814] text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"></rect><line x1="2" y1="9" x2="22" y2="9"></line><line x1="2" y1="15" x2="22" y2="15"></line><line x1="10" y1="9" x2="10" y2="21"></line><line x1="16" y1="9" x2="16" y2="21"></line></svg>
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Betonárska oceľ, drôt</h3>
+
+                                <button onclick="openProductModal(2)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Product 4: Valce -->
+                        <div class="swiper-slide h-auto">
+                            <div data-reveal="down" data-delay="350"
+                                class="bg-white p-10 h-full flex flex-col group hover:shadow-2xl transition-all duration-500 border border-slate-100">
+                                <div
+                                    class="w-16 h-16 shrink-0 bg-brand-black text-white rounded-sm flex items-center justify-center text-2xl sm:text-3xl shadow-sm mb-10 transition-transform duration-300">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>
+                                </div>
+                                <h3 class="text-2xl font-extrabold text-brand-black mb-6 leading-tight flex-grow">
+                                    Oceľové bramy</h3>
+
+                                <button onclick="openProductModal(3)"
+                                    class="flex items-center gap-3 text-brand-black font-extrabold text-xs uppercase tracking-[0.2em] group/link">
+                                    <span>Zistiť viac</span>
+                                    <div
+                                        class="w-8 h-8 rounded-full border border-slate-200 flex items-center justify-center group-hover/link:bg-brand-black group-hover/link:text-white transition-all">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination dots -->
+                    <div class="swiper-pagination !-bottom-12"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details Modal -->
+        <div id="product-modal" class="fixed inset-0 z-[100] hidden">
+            <div id="modal-overlay"
+                class="absolute inset-0 bg-brand-black/40 backdrop-blur-sm opacity-0 transition-opacity duration-500">
+            </div>
+            <div id="modal-content"
+                class="absolute right-0 top-0 h-full w-full md:w-[600px] bg-white shadow-2xl translate-x-full transition-transform duration-500 ease-out flex flex-col">
+                <div class="p-8 border-b border-slate-100 flex items-center justify-between bg-[#EEF4F4]">
+                    <div id="modal-icon-container"
+                        class="w-12 h-12 bg-brand-black text-white rounded-sm flex items-center justify-center text-xl">
+                        <i id="modal-icon" class="fa-solid"></i>
+                    </div>
+                    <button onclick="closeProductModal()"
+                        class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                    </button>
+                </div>
+
+                <div class="flex-grow overflow-y-auto p-8 lg:p-12">
+                    <h2 id="modal-title" class="text-3xl font-extrabold text-brand-black mb-8 leading-tight"></h2>
+
+                    <div id="modal-body" class="space-y-10 text-slate-600">
+                        <!-- Dynamic content injected here -->
+                    </div>
+                </div>
+
+                <div class="p-8 border-t border-slate-100 bg-slate-50">
+                    <button onclick="closeProductModal()"
+                        class="w-full bg-brand-black text-white font-extrabold text-xs uppercase tracking-widest py-5 rounded-full hover:bg-brand-blue transition-colors">
+                        Zavrieť detail
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partners / Suppliers -->
+        <section id="partners" class="py-24 bg-brand-black text-white relative overflow-hidden">
+            <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
+                <p data-reveal="down" class="text-[10px] font-black uppercase tracking-[0.5em] mb-12 opacity-50">Kľúčoví
+                    dodávatelia</p>
+                <div class="flex flex-wrap justify-center gap-12 md:gap-24 opacity-70">
+                    <span data-reveal="down" data-delay="50"
+                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">U.
+                        S. STEEL</span>
+                    <span data-reveal="down" data-delay="100"
+                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">METINVEST</span>
+                    <span data-reveal="down" data-delay="150"
+                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">AZOVSTAL</span>
+                    <span data-reveal="down" data-delay="200"
+                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">DUNAFERR</span>
+                    <span data-reveal="down" data-delay="250"
+                        class="text-2xl md:text-4xl font-black tracking-tighter hover:text-brand-blue transition-colors cursor-default">VÍTKOVICE</span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA Section (Europe Focus) -->
+        <section class="relative py-32 overflow-hidden bg-brand-gray/30 border-t border-slate-100">
+            <!-- Focused Central Europe Map Background -->
+            <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+                <img src="central_europe_map.svg"
+                    class="w-full h-full object-contain scale-[1.8] grayscale opacity-25 translate-y-6"
+                    alt="Central Europe Map CTA">
+                <div class="absolute inset-0 bg-gradient-to-r from-white/80 via-transparent to-white/80"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-white/70 via-transparent to-white/70"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+
+
+                <h2 data-reveal="down" data-delay="100" class="heading-l text-brand-black mb-12">
+                    Spoľahlivý partner pre <br> vaše projekty v strednej Európe.
+                </h2>
+
+                <div data-reveal="down" data-delay="200"
+                    class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8 border-t border-slate-200 pt-12 sm:border-t-0 sm:pt-0 text-left">
+
+                    <!-- Sídlo -->
+                    <div class="sm:pr-12 sm:border-r border-slate-200 flex flex-col items-start">
+                        <div
+                            class="w-12 h-12 bg-white text-brand-black rounded-full flex items-center justify-center text-xl mb-6 shadow-sm border border-slate-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><path d="M9 22v-4h6v4"></path><path d="M8 6h.01"></path><path d="M16 6h.01"></path><path d="M12 6h.01"></path><path d="M12 10h.01"></path><path d="M12 14h.01"></path><path d="M16 10h.01"></path><path d="M16 14h.01"></path><path d="M8 10h.01"></path><path d="M8 14h.01"></path></svg>
+                        </div>
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Sídlo
+                            spoločnosti</h4>
+                        <p class="text-brand-black font-extrabold text-lg mb-1">EUROTRADEMETAL</p>
+                        <p class="text-slate-500 font-medium text-sm text-balance">Budyšínska 38<br>831 02 Bratislava
+                        </p>
+                    </div>
+
+                    <!-- General Contact -->
+                    <div
+                        class="sm:pl-12 pt-8 sm:pt-0 flex flex-col items-start border-t border-slate-200 sm:border-t-0">
+                        <div
+                            class="w-12 h-12 bg-brand-blue text-white rounded-full flex items-center justify-center text-xl mb-6 shadow-lg shadow-brand-blue/30">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"></path><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                        </div>
+                        <h4 class="text-[10px] font-black uppercase tracking-[0.2em] text-slate-400 mb-2">Rýchly kontakt
+                        </h4>
+                        <div class="space-y-3 mt-4 flex flex-col items-start">
+                            <a href="tel:+421245248188"
+                                class="flex items-center gap-3 text-brand-black font-extrabold hover:text-brand-blue transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +421 2 4524 8188
+                            </a>
+                            <a href="mailto:sekretariat@eurotrade.sk"
+                                class="flex items-center gap-3 text-brand-black font-bold hover:text-brand-blue transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-brand-blue"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg> sekretariat@eurotrade.sk
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div data-reveal="down" data-delay="300" class="mt-16 flex justify-center">
+                    <a href="kontakt.html"
+                        class="bg-brand-blue text-white px-12 py-5 rounded-full font-black uppercase text-xs tracking-[0.2em] hover:bg-brand-darkBlue transition-all shadow-xl shadow-brand-blue/30">
+                        Kontakt
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white text-slate-500 py-12 border-t border-slate-100">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 text-center">
+            <div class="text-[10px] font-bold uppercase tracking-widest">
+                &copy; 2026 Eurotrademetal, spol. s r.o. Všetky práva vyhradené.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Portfolio Swiper
+        new Swiper('.portfolio-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: false, 
+            watchOverflow: true,
+            grabCursor: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-btn-next',
+                prevEl: '.swiper-btn-prev',
+                lockClass: 'hidden', 
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+                1280: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+
+        // Product Data for Modal
+        const productData = [
+            {
+                title: "Oceľové plechy, zvitky, páska",
+                icon: "fa-layer-group",
+                color: "#95EFCF",
+                content: `
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Technické špecifikácie</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-slate-50 p-6 border-l-4 border-[#95EFCF]">
+                                <span class="block text-[11px] font-black text-brand-black mb-2">OCEĽOVÉ PLECHY</span>
+                                <p class="text-sm leading-relaxed">
+                                    <strong>Hrúbka:</strong> 0.5 – 10 mm<br>
+                                    <strong>Šírka:</strong> do 1500 mm<br>
+                                    <strong>Dĺžka:</strong> do 6000 mm
+                                </p>
+                            </div>
+                            <div class="bg-slate-50 p-6 border-l-4 border-[#95EFCF]">
+                                <span class="block text-[11px] font-black text-brand-black mb-2">ZVITKY A PÁSKA</span>
+                                <p class="text-sm leading-relaxed">
+                                    <strong>Hrúbka:</strong> 0.5 – 6 mm<br>
+                                    <strong>Šírka:</strong> do 1500 mm
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Typy a Spracovanie</p>
+                        <p class="text-sm leading-loose">
+                            Za tepla, za studena valcované, štandardné, povrchovo upravené, vzorované, pozinkované.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Zmluvné kvality</p>
+                        <p class="text-lg font-extrabold text-brand-black">EN</p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Hlavní dodávatelia</p>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-[13px] font-medium leading-relaxed">
+                            <li>• Metinvest Ukrajina</li>
+                            <li>• U. S. Steel Košice, Slovensko</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                title: "Oceľové profily, rúry, tyče",
+                icon: "fa-shapes",
+                color: "#E5E7EB",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm">
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Profily</p>
+                            <p class="font-extrabold text-brand-black text-lg mb-2">L, U, I, T, H</p>
+                            <p class="opacity-70 italic">rovnoramenné, nerovnoramenné</p>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Rúry</p>
+                            <ul class="font-extrabold text-brand-black space-y-1">
+                                <li>• zvárané</li>
+                                <li>• bezošvé</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Tyče</p>
+                            <ul class="font-extrabold text-brand-black space-y-1">
+                                <li>• kruhové</li>
+                                <li>• štvorcové</li>
+                                <li>• šesťuholníkové</li>
+                                <li>• ploché</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Kvality podľa noriem</p>
+                        <p class="text-brand-black font-extrabold leading-relaxed">podľa EN</p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Dodávatelia</p>
+                        <ul class="space-y-2 text-[13px] font-medium">
+                            <li>• Maxstal, Poľsko</li>
+                            <li>• FERRUM, Poľsko</li>
+                            <li>• BOWIM, Poľsko</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                title: "Betonárska oceľ, drôt",
+                icon: "fa-road",
+                color: "#F33814",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Oceľové tyče</p>
+                            <div class="flex gap-4">
+                                <span class="bg-slate-100 px-3 py-1 text-xs font-bold rounded-full">hladké</span>
+                                <span class="bg-slate-100 px-3 py-1 text-xs font-bold rounded-full">rebrované</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Oceľový drôt</p>
+                            <p class="font-extrabold text-brand-black">dodávaný vo zvitkoch</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Kvality</p>
+                        <p class="text-brand-black font-extrabold">EN</p>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Dodávatelia</p>
+                        <ul class="space-y-2 text-[13px] font-medium">
+                            <li>• SZAO MMZ Moldavsko</li>
+                            <li>• ZAO Makeyevo Ukrajina</li>
+                            <li>• SSC Ljepajas Metalurgs, Lotyšsko</li>
+                        </ul>
+                    </div>
+                `
+            },
+            {
+                title: "Oceľové bramy",
+                icon: "fa-gears",
+                color: "#0B0C10",
+                content: `
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Technické špecifikácie</p>
+                            <p class="text-sm leading-relaxed">
+                                <strong>Hrúbka:</strong> 220 mm<br>
+                                <strong>Šírka:</strong> do 1220 mm<br>
+                                <strong>Dĺžka:</strong> do 6000 mm
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-brand-black text-[10px] font-black uppercase tracking-widest mb-4 opacity-50">Hlavní dodávatelia</p>
+                        <ul class="space-y-3 text-[13px] font-medium">
+                            <li class="flex items-center gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="opacity-30"><path d="M3 21h18"></path><path d="M7 21V7l5-2 5 2v14"></path><path d="M7 13h10"></path><path d="M12 13V7"></path></svg> U. S. Steel Košice, Slovensko</li>
+                        </ul>
+                    </div>
+                `
+            }
+        ];
+
+        function openProductModal(index) {
+            const product = productData[index];
+            const modal = document.getElementById('product-modal');
+            const overlay = document.getElementById('modal-overlay');
+            const content = document.getElementById('modal-content');
+
+            document.getElementById('modal-title').innerText = product.title;
+            // Modal icon handling placeholder
+            const iconBody = document.getElementById('modal-icon');
+            iconBody.className = `fa-solid ${product.icon}`; 
+            
+            document.getElementById('modal-icon-container').style.backgroundColor = product.icon === 'fa-shapes' ? '#0B0C10' : product.color;
+            document.getElementById('modal-body').innerHTML = product.content;
+
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+
+            setTimeout(() => {
+                overlay.style.opacity = '1';
+                content.style.transform = 'translateX(0)';
+            }, 10);
+        }
+
+        function closeProductModal() {
+            const overlay = document.getElementById('modal-overlay');
+            const content = document.getElementById('modal-content');
+            const modal = document.getElementById('product-modal');
+
+            overlay.style.opacity = '0';
+            content.style.transform = 'translateX(100%)';
+
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }, 500);
+        }
+
+        document.getElementById('modal-overlay').addEventListener('click', closeProductModal);
+
+        // Mobile Menu Logic
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+        let isMenuOpen = false;
+
+        function toggleMobileMenu(show) {
+            isMenuOpen = show;
+            if (show) {
+                mobileMenuOverlay.style.display = 'block';
+                mobileMenu.style.display = 'flex';
+                setTimeout(() => {
+                    mobileMenuOverlay.style.opacity = '1';
+                    mobileMenu.style.transform = 'translateX(0)';
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenuOverlay.style.opacity = '0';
+                mobileMenu.style.transform = 'translateX(-100%)';
+                setTimeout(() => {
+                    mobileMenuOverlay.style.display = 'none';
+                    mobileMenu.style.display = 'none';
+                }, 400);
+                document.body.style.overflow = '';
+            }
+        }
+
+        mobileMenuToggle.addEventListener('click', () => toggleMobileMenu(!isMenuOpen));
+        mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
+        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                document.body.classList.add('is-scrolled');
+            } else {
+                document.body.classList.remove('is-scrolled');
+            }
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
