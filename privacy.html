@@ -5,27 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ochrana osobných údajov | EUROTRADEMETAL</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/tailwind.css">
     <link rel="stylesheet" href="style.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            blue: '#0056b3',
-                            darkBlue: '#003d80',
-                            black: '#0a0a0a',
-                            gray: '#f5f5f5'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 
 <body class="bg-white overflow-x-hidden selection:bg-brand-blue selection:text-white">
@@ -46,7 +27,7 @@
                 <div class="relative group hidden md:block">
                     <button
                         class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-black hover:text-brand-blue transition-colors border-r border-slate-100 pr-6 mr-2">
-                        <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
+                        <img src="assets/images/flags/sk.svg" alt="Slovak"
                             class="w-5 h-auto rounded-sm object-cover shadow-sm opacity-90">
                         <span>SK</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none"
@@ -60,13 +41,13 @@
                         <div class="flex flex-col py-2">
                             <a href="privacy.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-brand-blue bg-slate-50 border-l-2 border-brand-blue">
-                                <img src="https://flagcdn.com/w40/sk.png" alt="Slovak"
+                                <img src="assets/images/flags/sk.svg" alt="Slovak"
                                     class="w-5 h-auto rounded-sm object-cover">
                                 <span>SK</span>
                             </a>
                             <a href="en/privacy.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">
-                                <img src="https://flagcdn.com/w40/gb.png" alt="English"
+                                <img src="assets/images/flags/gb.svg" alt="English"
                                     class="w-5 h-auto rounded-sm object-cover opacity-60">
                                 <span>EN</span>
                             </a>
