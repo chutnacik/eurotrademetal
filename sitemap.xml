@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://etm.ddev.sk/</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/produkty.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/produkty.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/produkty.html"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/kontakt.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/en/</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/en/products.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/produkty.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/products.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/produkty.html"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/en/contact.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/kontakt.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/kontakt.html"/>
+  </url>
+  <url>
+    <loc>https://etm.ddev.sk/en/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://etm.ddev.sk/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://etm.ddev.sk/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://etm.ddev.sk/privacy.html"/>
+  </url>
+</urlset>

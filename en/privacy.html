@@ -5,6 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy | EUROTRADEMETAL</title>
+    <meta name="description" content="Information about how EUROTRADEMETAL, spol. s r.o. processes personal data, including contacts, legal basis and the rights of data subjects.">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="canonical" href="https://etm.ddev.sk/en/privacy.html">
+    <link rel="alternate" href="https://etm.ddev.sk/privacy.html" hreflang="sk">
+    <link rel="alternate" href="https://etm.ddev.sk/en/privacy.html" hreflang="en">
+    <link rel="alternate" href="https://etm.ddev.sk/privacy.html" hreflang="x-default">
+    <meta property="og:type" content="article">
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="EUROTRADEMETAL">
+    <meta property="og:title" content="Privacy Policy | EUROTRADEMETAL">
+    <meta property="og:description" content="Information about how EUROTRADEMETAL, spol. s r.o. processes personal data.">
+    <meta property="og:url" content="https://etm.ddev.sk/en/privacy.html">
+    <meta property="og:image" content="https://etm.ddev.sk/assets/images/logo-bigger.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Privacy Policy | EUROTRADEMETAL">
+    <meta name="twitter:description" content="Information about how EUROTRADEMETAL, spol. s r.o. processes personal data.">
+    <meta name="twitter:image" content="https://etm.ddev.sk/assets/images/logo-bigger.png">
     <link rel="stylesheet" href="../assets/css/tailwind.css">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -27,7 +44,7 @@
                 <div class="relative group hidden md:block">
                     <button
                         class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-black hover:text-brand-blue transition-colors border-r border-slate-100 pr-6 mr-2">
-                        <img src="../assets/images/flags/gb.svg" alt="English"
+                        <img src="../assets/images/flags/gb.svg" alt="English" width="20" height="14"
                             class="w-5 h-auto rounded-sm object-cover shadow-sm opacity-90">
                         <span>EN</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none"
@@ -41,13 +58,13 @@
                         <div class="flex flex-col py-2">
                             <a href="privacy.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-brand-blue bg-slate-50 border-l-2 border-brand-blue">
-                                <img src="../assets/images/flags/gb.svg" alt="English"
+                                <img src="../assets/images/flags/gb.svg" alt="English" width="20" height="14"
                                     class="w-5 h-auto rounded-sm object-cover">
                                 <span>EN</span>
                             </a>
                             <a href="../privacy.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">
-                                <img src="../assets/images/flags/sk.svg" alt="Slovak"
+                                <img src="../assets/images/flags/sk.svg" alt="Slovak" width="20" height="14"
                                     class="w-5 h-auto rounded-sm object-cover opacity-60">
                                 <span>SK</span>
                             </a>
@@ -214,61 +231,7 @@
         </div>
     </footer>
 
-    <script>
-        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-        const mobileLinks = document.querySelectorAll('.mobile-nav-link');
-
-        let isMenuOpen = false;
-
-        function toggleMobileMenu(show) {
-            isMenuOpen = show;
-            if (show) {
-                mobileMenuToggle.classList.add('is-active');
-                mobileMenuOverlay.classList.remove('hidden-overlay');
-                mobileMenuOverlay.classList.add('active-overlay');
-                mobileMenu.classList.remove('hidden-menu');
-                mobileMenu.classList.add('active-menu');
-                document.body.style.overflow = 'hidden';
-            } else {
-                mobileMenuToggle.classList.remove('is-active');
-                mobileMenuOverlay.classList.remove('active-overlay');
-                mobileMenuOverlay.classList.add('hidden-overlay');
-                mobileMenu.classList.remove('active-menu');
-                mobileMenu.classList.add('hidden-menu');
-                document.body.style.overflow = '';
-            }
-        }
-
-        mobileMenuToggle.addEventListener('click', () => {
-            toggleMobileMenu(!isMenuOpen);
-        });
-
-        mobileMenuOverlay.addEventListener('click', () => {
-            toggleMobileMenu(false);
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                toggleMobileMenu(false);
-            });
-        });
-
-        const revealItems = document.querySelectorAll('[data-reveal]');
-        if (revealItems.length) {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            revealItems.forEach((item) => revealObserver.observe(item));
-        }
-    </script>
+    <script src="../assets/js/site.js" defer></script>
 </body>
 
 </html>
