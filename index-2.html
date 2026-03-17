@@ -30,26 +30,13 @@
             }
         }
     </script>
-    <style>
-        .glass-header {
-            background: transparent;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            transition: all 0.4s ease;
-        }
-        .is-scrolled .glass-header {
-            background: white;
-            border-bottom: 1px solid #f1f5f9;
-            box-shadow: 0 4px 20px -10px rgba(0,0,0,0.1);
-            height: 70px !important;
-        }
-    </style>
 </head>
 
 <body class="bg-brand-gray overflow-x-hidden selection:bg-brand-blue selection:text-white">
 
     <!-- Header Navigation -->
-    <header id="main-header" class="fixed top-0 left-0 w-full z-[170] glass-header">
-        <div class="max-w-[1400px] mx-auto flex items-center justify-between h-20 px-6 lg:px-12 transition-all duration-500">
+    <header class="fixed top-0 left-0 w-full bg-white z-[170] border-b border-slate-100">
+        <div class="max-w-[1400px] mx-auto flex items-center h-20 px-6 lg:px-12">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2">
                 <span class="text-xl font-[800] tracking-tighter uppercase text-brand-black">Eurotrade<span
@@ -57,14 +44,14 @@
             </a>
 
             <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-12">
+            <nav class="hidden lg:flex items-center gap-12 ml-auto mr-10 xl:mr-14">
                 <a href="#about" class="nav-link">O spoločnosti</a>
                 <a href="#products" class="nav-link">Produkty</a>
                 <a href="kontakt.html" class="nav-link">Kontakt</a>
             </nav>
 
             <!-- Actions -->
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-6 ml-auto lg:ml-0">
                 <!-- Language Dropdown -->
                 <div class="relative group hidden md:block">
                     <button
@@ -143,53 +130,52 @@
         </div>
     </div>
 
-    <main>
+    <main class="pt-20">
         <!-- Hero Section V2 -->
-        <section class="relative bg-white border-b border-slate-100 min-h-[85vh] flex flex-col lg:flex-row overflow-hidden">
+        <section class="relative bg-white border-b border-slate-100 min-h-[72vh] lg:min-h-[68vh] flex flex-col lg:flex-row overflow-hidden">
+            <div class="absolute inset-y-0 right-0 hidden w-1/2 bg-[radial-gradient(circle_at_top_right,rgba(0,86,179,0.08),transparent_55%)] lg:block"></div>
+
             <!-- Left Side: Image -->
-            <div class="lg:w-1/2 relative min-h-[500px] lg:min-h-0">
+            <div class="lg:w-1/2 relative min-h-[360px] sm:min-h-[420px] lg:min-h-0">
                 <img src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
                     alt="Hutnícky závod" class="absolute inset-0 w-full h-full object-cover">
-                <div class="absolute inset-0 bg-brand-black/10"></div>
-                
+                <div class="absolute inset-0 bg-gradient-to-tr from-brand-black/30 via-brand-black/10 to-transparent"></div>
+
                 <!-- Circular Logo (Bottom Right of Image) -->
-                <div class="absolute bottom-12 right-12 z-20">
+                <div class="absolute bottom-10 right-10 z-20">
                     <div class="relative w-32 h-32 flex items-center justify-center">
-                        <div class="absolute inset-0 bg-white/10 backdrop-blur-md rounded-full border border-white/20"></div>
-                        <img src="logo-bigger.png" alt="Logo" class="w-24 h-24 object-contain relative z-10 rounded-full bg-white p-3 shadow-2xl">
+                        <div class="absolute inset-0 rounded-full border border-white/20 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.5),rgba(255,255,255,0.12)_58%,rgba(255,255,255,0.06)_100%)] backdrop-blur-xl shadow-[0_24px_60px_-24px_rgba(15,23,42,0.55)]"></div>
+                        <img src="logo-bigger.png" alt="Logo" class="w-28 h-28 object-contain relative z-10 rounded-full bg-white p-2.5 shadow-xl">
                     </div>
                 </div>
             </div>
 
             <!-- Right Side: Content -->
-            <div class="lg:w-1/2 p-12 lg:p-24 flex flex-col justify-center">
-                <div data-reveal="down" class="max-w-2xl pt-24 lg:pt-0">
-                    <h2 class="text-4xl lg:text-6xl font-extrabold text-brand-black leading-[1.1] tracking-tighter mb-10">
-                        Váš Partner <br>
-                        V Oblasti <br>
-                        <span class="text-slate-300">Metalurgie</span>
+            <div class="lg:w-1/2 px-8 py-12 sm:px-10 lg:pl-16 lg:pr-12 xl:pl-20 xl:pr-14 flex flex-col justify-center">
+                <div data-reveal="down" class="max-w-2xl lg:pt-0">
+                    <span class="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.28em] text-brand-blue mb-8">
+                        <span class="h-2 w-2 rounded-full bg-brand-blue"></span>
+                        Medzinárodný obchod s oceľou
+                    </span>
+
+                    <h2 class="text-4xl lg:text-6xl font-extrabold text-brand-black leading-[1.02] tracking-tighter mb-8">
+                        Váš partner v oblasti <span class="text-slate-300">metalurgie</span>
                     </h2>
 
-                    <div class="pl-8 border-l-2 border-slate-100 mb-12">
-                        <p class="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
-                            Zabezpečujeme medzinárodný obchod s oceľou a hutníckym materiálom. Zameriavame sa na import a reexport najvyššej kvality pre trhy strednej Európy.
+                    <div class="mb-10">
+                        <p class="text-slate-600 text-lg font-medium leading-relaxed max-w-xl">
+                            Zabezpečujeme import a reexport hutníckeho materiálu pre Slovensko, Česko a širší región strednej Európy. Dôraz kladieme na spoľahlivosť dodávok, kvalitu a dlhodobé partnerstvá.
                         </p>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row items-center gap-10">
-                        <a href="#about" class="group bg-brand-black text-white px-10 py-5 rounded-sm font-black uppercase text-[10px] tracking-[0.2em] flex items-center gap-4 transition-all hover:bg-brand-blue">
-                            <span>O spoločnosti</span>
+                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+                        <a href="#products" class="group bg-brand-black text-white px-10 py-4 rounded-full font-black uppercase text-[10px] tracking-[0.2em] flex items-center gap-4 transition-all hover:bg-brand-blue shadow-lg shadow-brand-black/10">
+                            <span>Produkty</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                         </a>
-
-                        <div class="flex items-center gap-4">
-                            <div class="flex -space-x-3">
-                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="User 1">
-                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=100&auto=format&fit=crop" alt="User 2">
-                                <img class="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm" src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?q=80&w=100&auto=format&fit=crop" alt="User 3">
-                            </div>
-                            <span class="text-[10px] font-black text-brand-black uppercase tracking-wider underline underline-offset-4 decoration-slate-200">Tisíce ton dodaného materiálu</span>
-                        </div>
+                        <a href="kontakt.html" class="inline-flex items-center justify-center px-10 py-4 rounded-full border border-slate-300 bg-transparent text-brand-black font-black uppercase text-[10px] tracking-[0.2em] transition-all hover:border-brand-black hover:bg-white">
+                            Napíšte nám
+                        </a>
                     </div>
                 </div>
             </div>
@@ -725,7 +711,7 @@
 
         document.getElementById('modal-overlay').addEventListener('click', closeProductModal);
 
-        // Mobile Menu Logic
+        // Mobile Menu Toggle Logic
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
@@ -736,34 +722,32 @@
         function toggleMobileMenu(show) {
             isMenuOpen = show;
             if (show) {
-                mobileMenuOverlay.style.display = 'block';
-                mobileMenu.style.display = 'flex';
-                setTimeout(() => {
-                    mobileMenuOverlay.style.opacity = '1';
-                    mobileMenu.style.transform = 'translateX(0)';
-                }, 10);
+                mobileMenuToggle.classList.add('is-active');
+                mobileMenuOverlay.classList.remove('hidden-overlay');
+                mobileMenuOverlay.classList.add('active-overlay');
+                mobileMenu.classList.remove('hidden-menu');
+                mobileMenu.classList.add('active-menu');
                 document.body.style.overflow = 'hidden';
             } else {
-                mobileMenuOverlay.style.opacity = '0';
-                mobileMenu.style.transform = 'translateX(-100%)';
-                setTimeout(() => {
-                    mobileMenuOverlay.style.display = 'none';
-                    mobileMenu.style.display = 'none';
-                }, 400);
+                mobileMenuToggle.classList.remove('is-active');
+                mobileMenuOverlay.classList.remove('active-overlay');
+                mobileMenuOverlay.classList.add('hidden-overlay');
+                mobileMenu.classList.remove('active-menu');
+                mobileMenu.classList.add('hidden-menu');
                 document.body.style.overflow = '';
             }
         }
 
-        mobileMenuToggle.addEventListener('click', () => toggleMobileMenu(!isMenuOpen));
-        mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
-        mobileLinks.forEach(link => link.addEventListener('click', () => toggleMobileMenu(false)));
+        mobileMenuToggle.addEventListener('click', () => {
+            toggleMobileMenu(!isMenuOpen);
+        });
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                document.body.classList.add('is-scrolled');
-            } else {
-                document.body.classList.remove('is-scrolled');
-            }
+        mobileMenuOverlay.addEventListener('click', () => toggleMobileMenu(false));
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                toggleMobileMenu(false);
+            });
         });
 
         const revealObserver = new IntersectionObserver((entries) => {
