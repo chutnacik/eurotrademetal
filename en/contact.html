@@ -52,9 +52,9 @@
             ]
         }
     </script>
-    <link rel="preload" as="image" href="../assets/images/hero-industrial-unsplash.jpg" fetchpriority="high">
-    <link rel="stylesheet" href="../assets/css/tailwind.css">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="preload" as="image" href="../assets/images/hero-industrial-unsplash.webp" fetchpriority="high">
+    <link rel="stylesheet" href="../assets/css/tailwind.css?v=1773781018">
+    <link rel="stylesheet" href="../style.css?v=1773781018">
 </head>
 
 <body class="bg-white">
@@ -78,7 +78,7 @@
                 <div class="relative group hidden md:block">
                     <button
                         class="flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-brand-black hover:text-brand-blue transition-colors border-r border-slate-100 pr-6 mr-2">
-                        <img src="../assets/images/flags/gb.svg" alt="English" width="20" height="14"
+                        <img src="../assets/images/flags/gb.svg?v=2" alt="English" width="20" height="14"
                             class="w-5 h-auto rounded-sm object-cover shadow-sm opacity-90">
                         <span>EN</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="transition-transform group-hover:rotate-180"><path d="m6 9 6 6 6-6"></path></svg>
@@ -89,13 +89,13 @@
                         <div class="flex flex-col py-2">
                             <a href="contact.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-brand-blue bg-slate-50 border-l-2 border-brand-blue">
-                                <img src="../assets/images/flags/gb.svg" alt="English" width="20" height="14"
+                                <img src="../assets/images/flags/gb.svg?v=2" alt="English" width="20" height="14"
                                     class="w-5 h-auto rounded-sm object-cover">
                                 <span>EN</span>
                             </a>
                             <a href="../kontakt.html"
                                 class="flex items-center gap-3 px-6 py-2.5 text-[10px] font-black uppercase tracking-widest text-slate-400 hover:text-brand-blue hover:bg-slate-50 transition-colors">
-                                <img src="../assets/images/flags/sk.svg" alt="Slovak" width="20" height="14"
+                                <img src="../assets/images/flags/sk.svg?v=2" alt="Slovak" width="20" height="14"
                                     class="w-5 h-auto rounded-sm object-cover opacity-60">
                                 <span>SK</span>
                             </a>
@@ -152,7 +152,7 @@
         <section class="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div class="relative isolate mb-14 max-w-3xl mx-auto text-center rounded-[2rem] px-6 py-8">
                 <div aria-hidden="true" class="pointer-events-none absolute right-0 top-1/2 -z-10 -translate-y-1/2 sm:right-[-0.75rem] lg:right-[-1.5rem]">
-                    <img src="../assets/images/logo-hero-280.png" alt="" width="280" height="280" loading="lazy" decoding="async"
+                    <img src="../assets/images/logo-hero-280.webp" alt="" width="280" height="280" loading="lazy" decoding="async"
                         class="w-[190px] rotate-[18deg] opacity-[0.08] object-contain saturate-75 sm:w-[190px] sm:opacity-[0.05] sm:saturate-50 lg:w-[280px] lg:opacity-[0.07] xl:w-[340px]">
                 </div>
                 <div data-reveal="down" class="mb-4 flex justify-center">
@@ -180,7 +180,7 @@
                 class="mx-auto max-w-[1240px] overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-[0_20px_60px_rgba(15,23,42,0.08)]">
                 <div class="flex flex-col gap-8 lg:flex-row lg:items-stretch">
                     <div class="relative lg:w-[48%] xl:w-[44%]">
-                        <img src="../assets/images/hero-industrial-unsplash.jpg"
+                        <img src="../assets/images/hero-industrial-unsplash.webp"
                             alt="Contact EUROTRADEMETAL"
                             width="2070" height="1380" sizes="(min-width: 1280px) 44vw, (min-width: 1024px) 48vw, 100vw" fetchpriority="high" decoding="async"
                             class="h-full min-h-[420px] w-full rounded-t-[1.5rem] rounded-b-[1.5rem] lg:rounded-none lg:rounded-l-[2rem] object-cover brightness-[0.68] saturate-[0.85]"
@@ -232,8 +232,9 @@
                                         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5 text-slate-400 group-focus-within:text-brand-blue">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                                         </div>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-5 text-brand-accent font-extrabold" aria-hidden="true">*</div>
                                         <input type="text" id="name" name="name" required placeholder="e.g. John Smith"
-                                            class="w-full border border-slate-300 bg-white pl-11 pr-4 py-3 rounded-full outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400">
+                                            class="w-full border border-slate-300 bg-white pl-11 pr-10 py-3 rounded-full outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400">
                                     </div>
                                     <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Please enter your full name.</p>
                                 </div>
@@ -242,8 +243,9 @@
                                         <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5 text-slate-400 group-focus-within:text-brand-blue">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                                         </div>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-5 text-brand-accent font-extrabold" aria-hidden="true">*</div>
                                         <input type="tel" id="phone" name="phone" required placeholder="+421 9xx xxx xxx"
-                                            class="w-full border border-slate-300 bg-white pl-11 pr-4 py-3 rounded-full outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400">
+                                            class="w-full border border-slate-300 bg-white pl-11 pr-10 py-3 rounded-full outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400">
                                     </div>
                                     <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Please enter your phone number.</p>
                                 </div>
@@ -254,8 +256,9 @@
                                     <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5 text-slate-400 group-focus-within:text-brand-blue">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
                                     </div>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-5 text-brand-accent font-extrabold" aria-hidden="true">*</div>
                                     <input type="email" id="email" name="email" required placeholder="Email address"
-                                        class="w-full border border-slate-300 bg-white pl-11 pr-4 py-3 rounded-full outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400">
+                                        class="w-full border border-slate-300 bg-white pl-11 pr-10 py-3 rounded-full outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400">
                                 </div>
                                 <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Enter a valid email address.</p>
                             </div>
@@ -285,9 +288,10 @@
                                     <div class="pointer-events-none absolute left-0 top-0 flex items-center pl-5 pt-4 text-slate-400 group-focus-within:text-brand-blue">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 1 1 3 3L7 19l-4 1 1-4Z"></path></svg>
                                     </div>
+                                    <div class="pointer-events-none absolute right-0 top-0 flex items-center pr-5 pt-4 text-brand-accent font-extrabold" aria-hidden="true">*</div>
                                     <textarea id="message" name="message" rows="6" required
                                         placeholder="Write your message"
-                                        class="w-full border border-slate-300 bg-white pl-11 pr-4 py-3.5 rounded-[1.5rem] outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400 resize-none"></textarea>
+                                        class="w-full border border-slate-300 bg-white pl-11 pr-10 py-3.5 rounded-[1.5rem] outline-none focus:ring-2 focus:ring-brand-blue/20 transition-all text-sm font-semibold text-brand-black placeholder:text-slate-400 resize-none"></textarea>
                                 </div>
                                 <p class="text-red-500 text-[10px] font-bold mt-1 ml-1 hidden error-message"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>Please write your message.</p>
                             </div>
@@ -457,6 +461,7 @@
                 e.preventDefault();
                 let isValid = true;
                 clearFormStatus();
+                const errorIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="inline mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
 
                 // Fields to validate
                 const requiredFields = contactForm.querySelectorAll('[required]');
@@ -486,7 +491,7 @@
                                 errorMsg.classList.remove('hidden');
                                 // Custom message for email format if generic empty message is there
                                 if (field.type === 'email') {
-                                    errorMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-1"></i>Please enter your email address.';
+                                    errorMsg.innerHTML = `${errorIcon}Please enter your email address.`;
                                 }
                             }
                         } else {
@@ -495,7 +500,7 @@
                                 field.classList.add('border-red-500', 'focus:border-red-500', 'focus:ring-red-500/20');
                                 field.classList.remove('border-brand-blue', 'focus:ring-brand-blue/10');
                                 if (errorMsg) {
-                                    errorMsg.innerHTML = '<i class="fa-solid fa-circle-exclamation mr-1"></i>Enter a valid email address.';
+                                    errorMsg.innerHTML = `${errorIcon}Enter a valid email address.`;
                                     errorMsg.classList.remove('hidden');
                                 }
                             } else {

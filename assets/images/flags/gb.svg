@@ -1,13 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" role="img" aria-labelledby="title-gb">
-  <title id="title-gb">United Kingdom flag</title>
-  <clipPath id="clip-gb">
-    <rect width="60" height="30"/>
-  </clipPath>
-  <g clip-path="url(#clip-gb)">
-    <rect width="60" height="30" fill="#012169"/>
-    <path d="M0 0l60 30M60 0L0 30" stroke="#fff" stroke-width="6"/>
-    <path d="M0 0l60 30M60 0L0 30" stroke="#c8102e" stroke-width="4"/>
-    <path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/>
-    <path d="M30 0v30M0 15h60" stroke="#c8102e" stroke-width="6"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="900" height="600"><defs><clipPath id="s"><path d="M0,0 v600 h900 v-600 z"/></clipPath><clipPath id="t"><path d="M450,300 h450 v300 z v300 h-450 z h-450 v-300 z v-300 h450 z"/></clipPath></defs><g clip-path="url(#s)"><path d="M0,0 v600 h900 v-600 z" fill="#012169"/><path d="M0,0 900,600 M900,0 0,600" stroke="#ffffff" stroke-width="120"/><path d="M0,0 900,600 M900,0 0,600" clip-path="url(#t)" stroke="#c8102e" stroke-width="80"/><path d="M450,0 V600 M0,300 h900" stroke="#ffffff" stroke-width="200"/><path d="M450,0 v600 M0,300 h900" stroke="#C8102E" stroke-width="120"/></g></svg>
