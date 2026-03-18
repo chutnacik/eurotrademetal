@@ -3,4 +3,6 @@
 __pycache__/
 *.pyc
 smtp-config.php
+admin-config.php
+data/contact-submissions.json
 node_modules/

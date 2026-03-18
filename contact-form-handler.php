@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/contact-storage.php';
+
 header('Content-Type: application/json; charset=UTF-8');
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -236,12 +238,30 @@ $bodyLines = [
 ];
 
 $body = implode("\n", $bodyLines);
+
+try {
+    append_contact_submission([
+        'name' => $name,
+        'phone' => $phone,
+        'email' => $email,
+        'subject_key' => $subject,
+        'subject_label' => $subjectLabel,
+        'message' => $message,
+        'lang' => $lang,
+        'ip' => (string) ($_SERVER['REMOTE_ADDR'] ?? 'unknown'),
+        'user_agent' => (string) ($_SERVER['HTTP_USER_AGENT'] ?? ''),
+    ]);
+} catch (Throwable $exception) {
+    error_log('Contact form storage error: ' . $exception->getMessage());
+    respond(500, false, $lang === 'en' ? 'The message could not be saved right now. Please try again later.' : 'Správu sa teraz nepodarilo uložiť. Skúste to prosím znova neskôr.');
+}
+
 try {
     $smtpConfig = load_smtp_config();
     send_via_smtp($smtpConfig, $email, $name, $mailSubject, $body);
 } catch (Throwable $exception) {
     error_log('Contact form SMTP error: ' . $exception->getMessage());
-    respond(500, false, $lang === 'en' ? 'The message could not be sent right now. Please try again later.' : 'Správu sa teraz nepodarilo odoslať. Skúste to prosím znova neskôr.');
+    respond(200, true, $lang === 'en' ? 'Your message has been saved, but the email notification could not be sent right now.' : 'Správa bola uložená, ale e-mailové upozornenie sa teraz nepodarilo odoslať.');
 }
 
 respond(200, true, $lang === 'en' ? 'Thank you, your message has been sent.' : 'Ďakujeme, vaša správa bola odoslaná.');
